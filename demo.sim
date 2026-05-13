@@ -1,40 +1,26 @@
-###########################################
-#         Auto Generated  #
-###########################################
+#############################################
+#          Auto Generated SIM File         #
+#############################################
 <config sw> Protocol = 29
-<config sw> PIN_KRX_CANH = 6
-<config sw> TYPE_KRX_CANH = 0
-<config sw> VOLT_KRX_CANH = 3
-<config sw> PIN_KTX_CANH = 14
-<config sw> TYPE_KTX_CANH = 0
-<config sw> VOLT_KTX_CANH = 3
-<config sw> PIN_LRX_CANH =  6
-<config sw> TYPE_LTX_CANH = 0
-<config sw> VOLT_LTX_CANH = 3
-<config sw> VREF = 0
 <config sw> BAUDRATE = 500000
-<config sw> DATABIT = 0
-<config sw> PARITY = 0
+<config sw> PIN_KRX_CANH = 6
+<config sw> PIN_KTX_CANH = 14
+<config sw> VOLT_KRX_CANH = 3
+<config sw> VREF = 0
 <config sw> TBYTE = 8
-<config sw> TFRAME = 30
-<config sw> F CAN NUMBER FRAME = 3
-<config sw> RANGE =700,7FF
-###########################################
-#         End of config                     #
-###########################################   
-//Note: System: Wheel Speed Sensor-Left Front
-//Note: PID: eLDID_0001_Wheel speed sensor -Left Front_CAN_UDS_003
-INFO_DATABASE = Req>1		000007DF 08 03 22 01 04 00 00 00 00 	NONE	0
-INFO_DATABASE = Res<1		2024 08 Res<1		000007E8 08 10 2A 00 00 00 00 00 00 	4	0 Res<1		000007E8 08 21 00 00 00 00 00 00 00 	4	0 Res<1		000007E8 08 22 00 14 00 00 00 00 00 	4	0 Res<1		000007E8 08 23 00 00 00 00 00 00 00 	4	0 Res<1		000007E8 08 24 00 00 00 00 00 00 00 	4	0 Res<1		000007E8 08 25 00 00 00 00 00 00 00 	4	0 Res<1		000007E8 08 26 00 00 00 00 00 00 00 	4	0 	NONE	0
-//Note: System: Wheel Speed Sensor-Right Front
-//Note: PID: eLDID_0002_Wheel speed sensor -Right Front_CAN_UDS_003
-INFO_DATABASE = Req>1		000007DF 08 03 22 01 04 00 00 00 00 	NONE	0
-INFO_DATABASE = Res<1		2024 08 Res<1		000007E8 08 10 2A 00 00 00 00 00 00 	4	0 Res<1		000007E8 08 21 00 00 00 00 00 00 00 	4	0 Res<1		000007E8 08 22 00 00 15 00 00 00 00 	4	0 Res<1		000007E8 08 23 00 00 00 00 00 00 00 	4	0 Res<1		000007E8 08 24 00 00 00 00 00 00 00 	4	0 Res<1		000007E8 08 25 00 00 00 00 00 00 00 	4	0 Res<1		000007E8 08 26 00 00 00 00 00 00 00 	4	0 	NONE	0
-//Note: System: Wheel Speed Sensor-Left Rear
-//Note: PID: eLDID_0003_Wheel speed sensor -Left Rear_CAN_UDS_003
-INFO_DATABASE = Req>1		000007DF 08 03 22 01 04 00 00 00 00 	NONE	0
-INFO_DATABASE = Res<1		2024 08 Res<1		000007E8 08 10 2A 00 00 00 00 00 00 	4	0 Res<1		000007E8 08 21 00 00 00 00 00 00 00 	4	0 Res<1		000007E8 08 22 00 00 00 16 00 00 00 	4	0 Res<1		000007E8 08 23 00 00 00 00 00 00 00 	4	0 Res<1		000007E8 08 24 00 00 00 00 00 00 00 	4	0 Res<1		000007E8 08 25 00 00 00 00 00 00 00 	4	0 Res<1		000007E8 08 26 00 00 00 00 00 00 00 	4	0 	NONE	0
-//Note: System: Wheel Speed Sensor-Right Rear
-//Note: PID: eLDID_0004_Wheel speed sensor -Right Rear_CAN_UDS_003
-INFO_DATABASE = Req>1		000007DF 08 03 22 01 04 00 00 00 00 	NONE	0
-INFO_DATABASE = Res<1		2024 08 Res<1		000007E8 08 10 2A 00 00 00 00 00 00 	4	0 Res<1		000007E8 08 21 00 00 00 00 00 00 00 	4	0 Res<1		000007E8 08 22 00 00 00 00 17 00 00 	4	0 Res<1		000007E8 08 23 00 00 00 00 00 00 00 	4	0 Res<1		000007E8 08 24 00 00 00 00 00 00 00 	4	0 Res<1		000007E8 08 25 00 00 00 00 00 00 00 	4	0 Res<1		000007E8 08 26 00 00 00 00 00 00 00 	4	0 	NONE	0
+<config sw> TFRAME = 5
+<config sw> RANGE = 0,0;
+#############################################
+
+//Note: Wheel Speed Sensor-Left Front | PID: eLDID_0001_Wheel speed sensor -Left Front_CAN_UDS_003 | Value: 20
+//Note: Wheel Speed Sensor-Right Front | PID: eLDID_0002_Wheel speed sensor -Right Front_CAN_UDS_003 | Value: 21
+//Note: Wheel Speed Sensor-Left Rear | PID: eLDID_0003_Wheel speed sensor -Left Rear_CAN_UDS_003 | Value: 22
+//Note: Wheel Speed Sensor-Right Rear | PID: eLDID_0004_Wheel speed sensor -Right Rear_CAN_UDS_003 | Value: 23
+INFO_DATABASE = Req>1		000007D9 08 03 22 01 04 00 00 00 00 	4	0
+INFO_DATABASE = Res<1		000007D9 08 10 2A 00 00 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1		000007D9 08 21 00 00 00 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1		000007D9 08 22 00 14 15 16 17 00 00 	NONE	0
+INFO_DATABASE = Res<1		000007D9 08 23 00 00 00 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1		000007D9 08 24 00 00 00 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1		000007D9 08 25 00 00 00 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1		000007D9 08 26 00 00 00 00 00 00 00 	NONE	0
