@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p \"c:\\\\Users\\\\anhta\\\\INNOVA\\\\000. WORKSPACE\\\\001.___My_Python_Project\\\\CreateSimualationfile\\\\.claude\")",
+      "Bash(python first_idea.py)",
+      "Bash(python -c ' *)",
+      "Bash(uv add *)",
+      "Bash(dir \"c:\\\\Users\\\\anhta\\\\INNOVA\\\\000. WORKSPACE\\\\001.___My_Python_Project\\\\CreateSimualationfile\\\\output\" /s /b)",
+      "Bash(python main.py)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\anhta\\INNOVA\\000. WORKSPACE\\001.___My_Python_Project\\CreateSimualationfile"
+    ]
+  }
+}
