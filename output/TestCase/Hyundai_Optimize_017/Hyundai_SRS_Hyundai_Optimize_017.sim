@@ -1,0 +1,54 @@
+###########################################
+#         Auto Generated                  #
+###########################################
+<config sw> Protocol = 15
+<config sw> PIN_KRX_CANH = 12
+<config sw> TYPE_KRX_CANH = 0
+<config sw> VOLT_KRX_CANH = 3
+<config sw> PIN_KTX_CANH = 12
+<config sw> TYPE_KTX_CANH = 0
+<config sw> VOLT_KTX_CANH = 3
+<config sw> PIN_LRX_CANH =  12
+<config sw> TYPE_LTX_CANH = 0
+<config sw> VOLT_LTX_CANH = 3
+<config sw> VREF = 0
+<config sw> BAUDRATE = 10400
+<config sw> DATABIT = 0
+<config sw> PARITY = 0
+<config sw> TBYTE = 8
+<config sw> TFRAME = 10
+<config sw> F CAN NUMBER FRAME = 1
+<config sw> RANGE =  700,7FF;
+###########################################
+#         End of config                   #
+###########################################
+SIZE_DATABASE = 9
+
+ //------------------------frame 1
+
+INFO_DATABASE = Req>1			80 58 F1 01 81	CS	0	0
+INFO_DATABASE = Res<1			80 F1 58 03 C1 EF 8F	CS	0	0
+
+
+ //------------------------frame 3
+
+INFO_DATABASE = Req>3			80 58 F1 01 3E	CS	0	0
+INFO_DATABASE = Res<3			80 F1 58 01 7E	CS	0	0
+
+ //------------------------frame 4
+
+INFO_DATABASE = Req>4			80 58 F1 04 18 00 FF 00	CS	0	0
+INFO_DATABASE = Res<4			80 F1 58 20 58 0A 94 93 00 93 96 00 95 22 00 94 10 00 93 98 00 95 24 00 94 29 00 94 81 00 93 52 00 97 01 00	CS	0	0
+
+ //------------------------frame 5
+
+INFO_DATABASE = Req>5			80 58 F1 04 18 01 FF 00	CS	0	0
+INFO_DATABASE = Res<5			80 F1 58 20 58 0A 94 93 00 93 96 00 95 22 00 94 10 00 93 98 00 95 24 00 94 09 00 94 81 00 93 52 00 97 01 00	CS	0	0
+
+ //------------------------frame 8
+
+INFO_DATABASE = Req>8			80 58 F1 03 14 xx 00	CS	0	0
+INFO_DATABASE = Res<8			80 F1 58 03 54 +00 00	CS	0	0
+###########################################
+#         End of DataBase                 #
+###########################################
