@@ -1,0 +1,117 @@
+###########################################
+#         Auto Generated                  #
+###########################################
+<config sw> Protocol = 29
+<config sw> PIN_KRX_CANH = 6
+<config sw> TYPE_KRX_CANH = 0
+<config sw> VOLT_KRX_CANH = 3
+<config sw> PIN_KTX_CANH = 14
+<config sw> TYPE_KTX_CANH = 0
+<config sw> VOLT_KTX_CANH = 3
+<config sw> PIN_LRX_CANH =  6
+<config sw> TYPE_LTX_CANH = 0
+<config sw> VOLT_LTX_CANH = 3
+<config sw> VREF = 0
+<config sw> BAUDRATE = 500000
+<config sw> DATABIT = 0
+<config sw> PARITY = 0
+<config sw> TBYTE = 8
+<config sw> TFRAME = 10
+<config sw> F CAN NUMBER FRAME = 1
+<config sw> RANGE =  700,7FF;
+###########################################
+#         End of config                   #
+###########################################
+SIZE_DATABASE = 12
+
+ //------------------------frame 1
+INFO_DATABASE = Req>1			000007D2  08  02 10 xx 00 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<1			000007DA  08  02 50 +00 00 00 00 00 00	NONE	0	0
+
+ //------------------------frame 3
+INFO_DATABASE = Req>3			000007D2  08  02 3E 00 00 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<3			000007DA  08  02 7E 00 00 00 00 00 00	NONE	0	0
+
+ //------------------------frame 4
+INFO_DATABASE = Req>4			000007D2  08  04 18 00 FF 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<4			000007DA  08  10 0B 58 03 93 61 61 93	NONE	0	0
+INFO_DATABASE = Req>10			q-- 000007D2  08  30 xx xx 00 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<10			000007DA  08  21 45 06 81 C1 20 00 00	NONE	0	0
+INFO_DATABASE = Res<10			000007DA  08  22 45 06 81 C1 20 00 00	NONE	0	0
+INFO_DATABASE = Res<10			000007DA  08  23 45 06 81 C1 20 00 00	NONE	0	0
+INFO_DATABASE = Res<10			000007DA  08  24 45 06 81 C1 20 00 00	NONE	0	0
+INFO_DATABASE = Res<10			000007DA  08  25 45 06 81 C1 20 00 00	NONE	0	0
+INFO_DATABASE = Res<10			000007DA  08  26 45 06 81 C1 20 00 00	NONE	0	0
+INFO_DATABASE = Res<10			000007DA  08  27 45 06 81 C1 20 00 00	NONE	0	0
+INFO_DATABASE = Res<10			000007DA  08  28 45 06 81 C1 20 00 00	NONE	0	0
+
+ //------------------------frame 5
+INFO_DATABASE = Req>5			000007D2  08  04 18 60 FF 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<5			000007DA  08  10 0B 58 03 93 61 61 93	NONE	0	0
+INFO_DATABASE = Res<5			000007DA  08  21 94 22 93 82 40 00 00	NONE	0	0
+ //------------------------frame 6
+INFO_DATABASE = Req>6			000007D2  08  04 18 20 FF 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<6			000007DA  08  10 0B 58 03 93 61 61 93	NONE	0	0
+INFO_DATABASE = Res<5			000007DA  08  21 94 22 93 82 40 00 00	NONE	0	0
+ //------------------------frame 7
+INFO_DATABASE = Req>7			000007D2  08  03 14 xx 00 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<7			000007DA  08  03 54 +00 00 00 00 00 00	NONE	0	0
+
+ //------------------------frame 8
+INFO_DATABASE = Req>8			000007D2  08  01 20 00 00 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<8			000007DA  08  01 60 00 00 00 00 00 00	NONE	0	0
+
+ //------------------------frame 1
+INFO_DATABASE = Req>1			000007DF 08 02 10 81 00 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<1			000007E8 08 02 50 +00 00 00 00 00 00	NONE	0	0
+INFO_DATABASE = Req>1			000007DF 08 01 20 00 00 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<1			000007E8 08 01 60 00 00 00 00 00 00	NONE	0	0
+
+INFO_DATABASE = Req>4			000007D2  08  03 22 xx xx 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<4			000007DA  08  10 3C 62 +h0007 +h0008 ff ff ff	NONE	0	0
+INFO_DATABASE = Req>10			q-- 000007D2  08  30 xx xx 00 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<10			000007DA  08  21 ff ff ff ff ff ff ff	NONE	0	0
+INFO_DATABASE = Res<10			000007DA  08  22 ff ff ff ff ff ff ff	NONE	0	0
+INFO_DATABASE = Res<10			000007DA  08  23 ff ff ff ff ff ff ff	NONE	0	0
+INFO_DATABASE = Res<10			000007DA  08  24 ff ff ff ff ff ff ff	NONE	0	0
+INFO_DATABASE = Res<10			000007DA  08  25 ff ff ff ff ff ff ff	NONE	0	0
+INFO_DATABASE = Res<10			000007DA  08  26 ff ff ff ff ff ff ff	NONE	0	0
+INFO_DATABASE = Res<10			000007DA  08  27 ff ff ff ff ff ff ff	NONE	0	0
+INFO_DATABASE = Res<10			000007DA  08  28 ff ff ff ff ff ff ff	NONE	0	0
+
+
+INFO_DATABASE = Req>4			000007D2  08  02 21 D0 00 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<4			000007DA  08  10 3C 61 D0 FF ff ff ff	NONE	0	0
+INFO_DATABASE = Req>10			q-- 000007D2  08  30 xx xx 00 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<10			000007DA  08  21 90 C6 75 1A 1A 17 17	NONE	0	0
+INFO_DATABASE = Res<10			000007DA  08  22 16 16 1A 19 00 00 1A	NONE	0	0
+INFO_DATABASE = Res<10			000007DA  08  23 1A 17 18 00 00 38 B9	NONE	0	0
+INFO_DATABASE = Res<10			000007DA  08  24 ff ff ff ff ff ff ff	NONE	0	0
+INFO_DATABASE = Res<10			000007DA  08  25 ff ff ff ff ff ff ff	NONE	0	0
+INFO_DATABASE = Res<10			000007DA  08  26 ff ff ff ff ff ff ff	NONE	0	0
+INFO_DATABASE = Res<10			000007DA  08  27 ff ff ff ff ff ff ff	NONE	0	0
+INFO_DATABASE = Res<10			000007DA  08  28 ff ff ff ff ff ff ff	NONE	0	0
+
+//INFO_DATABASE = Req>4			000007D2  08  02 21 xx 00 00 00 00 00	NONE	0	0
+//INFO_DATABASE = Res<4			000007DA  08  10 3C 61 +0007h FE FE FE FE	NONE	0	0
+//INFO_DATABASE = Req>10			q-- 000007D2  08  30 xx xx 00 00 00 00 00	NONE	0	0
+//INFO_DATABASE = Res<10			000007DA  08  21 ff ff ff ff ff ff ff	NONE	0	0
+//INFO_DATABASE = Res<10			000007DA  08  22 ff ff ff ff ff ff ff	NONE	0	0
+//INFO_DATABASE = Res<10			000007DA  08  23 ff ff ff ff ff ff ff	NONE	0	0
+//INFO_DATABASE = Res<10			000007DA  08  24 ff ff ff ff ff ff ff	NONE	0	0
+//INFO_DATABASE = Res<10			000007DA  08  25 ff ff ff ff ff ff ff	NONE	0	0
+//INFO_DATABASE = Res<10			000007DA  08  26 ff ff ff ff ff ff ff	NONE	0	0
+//INFO_DATABASE = Res<10			000007DA  08  27 ff ff ff ff ff ff ff	NONE	0	0
+//INFO_DATABASE = Res<10			000007DA  08  28 ff ff ff ff ff ff ff	NONE	0	0
+
+INFO_DATABASE = Req>4			000007D2  08  03 19 02 08 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<4			000007DA  08  10 1B 59 02 93 61 61 93	NONE	0	0
+INFO_DATABASE = Req>10			q-- 000007D2  08  30 xx xx 00 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<10			000007DA  08  21 45 06 81 C1 20 00 00	NONE	0	0
+INFO_DATABASE = Res<10			000007DA  08  22 45 06 81 C1 20 00 00	NONE	0	0
+INFO_DATABASE = Res<10			000007DA  08  23 45 06 81 C1 20 00 00	NONE	0	0
+
+
+###########################################
+#         End of DataBase                 #
+###########################################

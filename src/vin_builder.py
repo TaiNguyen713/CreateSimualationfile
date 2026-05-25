@@ -368,17 +368,37 @@ def _field(row: dict, *keys: str, default: str = 'N/A') -> str:
 def generate_vin_sim_files(
     config_path: Path,
     output_dir: Path,
+    loader=None,
 ) -> int:
     """Generate one folder per vehicle row in the VIN_YMME sheet.
 
     Each folder contains a .sim (OBD2 + system sections) and a .json metadata file.
     Only the Mode 9 PID 02 VIN bytes differ between vehicles; all other OBD2 data
     is kept verbatim from the template above.
+
+    Parameters
+    ----------
+    config_path:
+        Excel config file with VIN_YMME sheet (required) and optionally NWS / PIDs sheets.
+    output_dir:
+        Root output directory; one sub-folder is created per vehicle.
+    loader:
+        Optional pre-built DataLoader instance.  Pass one from the caller when
+        batch-processing many configs so the master databases are loaded only once.
+        A fresh DataLoader is created internally when None is passed.
     """
     from first_idea import DataLoader, build_all_system_content
 
-    pids   = pd.read_excel(str(config_path), sheet_name='PIDs').astype(str)
-    loader = DataLoader()
+    if loader is None:
+        loader = DataLoader()
+
+    # PIDs sheet is optional — auto-generated configs contain only VIN_YMME + NWS
+    xf = pd.ExcelFile(str(config_path))
+    if 'PIDs' in xf.sheet_names:
+        pids = pd.read_excel(xf, sheet_name='PIDs').astype(str)
+    else:
+        pids = pd.DataFrame(columns=['ItemID', 'System', 'Value', 'MsgID/ECUID/ProfileID'])
+
     system_content: dict[str, list[str]] = {}
     try:
         system_content = build_all_system_content(pids, loader, config_path)

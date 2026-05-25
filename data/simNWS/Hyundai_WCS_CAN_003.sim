@@ -1,0 +1,61 @@
+###########################################
+#         Auto Generated                  #
+###########################################
+<config sw> Protocol = 29
+<config sw> PIN_KRX_CANH = 6
+<config sw> TYPE_KRX_CANH = 0
+<config sw> VOLT_KRX_CANH = 3
+<config sw> PIN_KTX_CANH = 14
+<config sw> TYPE_KTX_CANH = 0
+<config sw> VOLT_KTX_CANH = 3
+<config sw> PIN_LRX_CANH =  6
+<config sw> TYPE_LTX_CANH = 0
+<config sw> VOLT_LTX_CANH = 3
+<config sw> VREF = 0
+<config sw> BAUDRATE = 500000
+<config sw> DATABIT = 0
+<config sw> PARITY = 0
+<config sw> TBYTE = 8
+<config sw> TFRAME = 10
+<config sw> F CAN NUMBER FRAME = 1
+<config sw> RANGE =  700,7FF;
+###########################################
+#         End of config                   #
+###########################################
+SIZE_DATABASE = 12
+
+ //------------------------frame 1
+INFO_DATABASE = Req>1			000007C3  08  02 10 xx 00 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<1			000007CB  08  02 50 +00 00 00 00 00 00	NONE	0	0
+ //------------------------frame 2
+INFO_DATABASE = Req>2			000007C3  08  02 3E 00 00 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<2			000007CB  08  02 7E 00 00 00 00 00 00	NONE	0	0
+ //------------------------frame 3
+INFO_DATABASE = Req>3			000007C3  08  04 18 00 FF 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<3			000007CB  08  10 0C 58 03 91 02 60 91	NONE	0	0
+INFO_DATABASE = Req>3			000007C3  08  30 00 00 00 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<3			000007CB  08  21 01 20 91 11 40 56 21	NONE	0	0
+ //------------------------frame 4
+INFO_DATABASE = Req>4			000007C3  08  03 14 FF 00 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<4			000007CB  08  03 54 FF 00 00 00 00 00	NONE	0	0
+ //------------------------frame 5
+INFO_DATABASE = Req>5			000007C3  08  01 20 00 00 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<5			000007CB  08  01 60 00 00 00 00 00 00	NONE	0	0
+ //------------------------frame 1
+
+INFO_DATABASE = Req>5			000007C3  08  02 11 01 00 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<5			000007CB  08  07 7F 51 01 11 11 11 11	NONE	0	0
+
+INFO_DATABASE = Req>5			000007C3  08  02 21 0A 00 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<5			000007CB  08  07 61 0A xx xx xx xx xx	NONE	0	0
+
+INFO_DATABASE = Req>5			000007C3  08  02 21 0B 00 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<5			000007CB  08  07 61 0B xx xx xx xx xx	NONE	0	0
+
+INFO_DATABASE = Req>5			000007C3  08  02 31 01 00 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<5			000007CB  08  02 71 01 00 00 00 00 00	NONE	0	0
+
+
+###########################################
+#         End of DataBase                 #
+###########################################

@@ -1,0 +1,86 @@
+###########################################
+#         Auto Generated                  #
+###########################################
+<config sw> Protocol = 15
+<config sw> PIN_KRX_CANH = 7
+<config sw> TYPE_KRX_CANH = 0
+<config sw> VOLT_KRX_CANH = 3
+<config sw> PIN_KTX_CANH = 7
+<config sw> TYPE_KTX_CANH = 0
+<config sw> VOLT_KTX_CANH = 3
+<config sw> PIN_LRX_CANH =  7
+<config sw> TYPE_LTX_CANH = 0
+<config sw> VOLT_LTX_CANH = 3
+<config sw> VREF = 0
+<config sw> BAUDRATE = 10400
+<config sw> DATABIT = 0
+<config sw> PARITY = 0
+<config sw> TBYTE = 8
+<config sw> TFRAME = 10
+<config sw> F CAN NUMBER FRAME = 1
+<config sw> RANGE =  700,7FF;
+###########################################
+#         End of config                   #
+###########################################
+SIZE_DATABASE = 9
+
+ //------------------------frame 1
+
+INFO_DATABASE = Req>1			81 12 F1 81	CS	0	0
+INFO_DATABASE = Res<1			83 F1 12 C1 DF 8F	CS	0	0
+
+ //------------------------frame 2
+
+INFO_DATABASE = Req>2			81 12 F1 3E	CS	0	0
+INFO_DATABASE = Res<2			81 F1 12 7E	CS	0	0
+
+ //------------------------frame 3
+
+INFO_DATABASE = Req>3			81 12 F1 13	CS	0	0
+INFO_DATABASE = Res<3			85 F1 12 53 01 23 01 24	CS	0	0
+
+ //------------------------frame 4
+
+INFO_DATABASE = Req>4			81 12 F1 03	CS	0	0
+INFO_DATABASE = Res<4			85 F1 12 43 07 50 07 55	CS	0	0
+
+ //------------------------frame 5
+
+INFO_DATABASE = Req>5			81 12 F1 07	CS	0	0
+INFO_DATABASE = Res<5			85 F1 12 47 07 50 07 60	CS	0	0
+
+ //------------------------frame 6
+
+INFO_DATABASE = Req>6			81 12 F1 04	CS	0	0
+INFO_DATABASE = Res<6			81 F1 12 44	CS	0	0
+
+ //------------------------frame 7
+
+INFO_DATABASE = Req>7			81 12 F1 20	CS	0	0
+INFO_DATABASE = Res<7			81 F1 12 60	CS	0	0
+
+ //------------------------frame 8
+
+INFO_DATABASE = Req>8			81 12 F1 82	CS	0	0
+INFO_DATABASE = Res<8			81 F1 12 C2	CS	0	0
+
+//ECU infor
+INFO_DATABASE = Req>9			82 12 F1 A0 80	CS	0	0
+INFO_DATABASE = Res<9			85 F1 12 E0 41 41 41 41	CS	0	0
+
+INFO_DATABASE = Req>9			82 12 F1 A0 81	CS	0	0
+INFO_DATABASE = Res<9			80 F1 12 02 E0 41	CS	0	0
+
+INFO_DATABASE = Req>9			82 12 F1 A0 82	CS	0	0
+INFO_DATABASE = Res<9			80 F1 12 02 E0 41	CS	0	0
+///
+INFO_DATABASE = Req>9			82 12 F1 A0 EF	CS	0	0
+INFO_DATABASE = Res<9			80 F1 12 02 E0 00 00	CS	0	0
+
+INFO_DATABASE = Req>9			82 12 F1 A0 EE	CS	0	0
+INFO_DATABASE = Res<9			80 F1 12 02 E0 00 00	CS	0	0
+
+
+###########################################
+#         End of DataBase                 #
+###########################################

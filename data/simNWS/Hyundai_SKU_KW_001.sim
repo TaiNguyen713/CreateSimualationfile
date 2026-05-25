@@ -1,0 +1,85 @@
+###########################################
+#         Auto Generated                  #
+###########################################
+<config sw> Protocol = 15
+<config sw> PIN_KRX_CANH = 12
+<config sw> TYPE_KRX_CANH = 0
+<config sw> VOLT_KRX_CANH = 3
+<config sw> PIN_KTX_CANH = 12
+<config sw> TYPE_KTX_CANH = 0
+<config sw> VOLT_KTX_CANH = 3
+<config sw> PIN_LRX_CANH =  12
+<config sw> TYPE_LTX_CANH = 0
+<config sw> VOLT_LTX_CANH = 3
+<config sw> VREF = 0
+<config sw> BAUDRATE = 10400
+<config sw> DATABIT = 0
+<config sw> PARITY = 0
+<config sw> TBYTE = 8
+<config sw> TFRAME = 10
+<config sw> F CAN NUMBER FRAME = 1
+<config sw> RANGE =  700,7FF;
+###########################################
+#         End of config                   #
+###########################################
+SIZE_DATABASE = 9
+
+ //------------------------frame 1
+
+INFO_DATABASE = Req>1			80 47 F1 01 81	CS	0	0
+INFO_DATABASE = Res<1			80 F1 47 03 C1 EF 8F	CS	0	0
+
+ //------------------------frame 2
+
+INFO_DATABASE = Req>2			80 47 F1 02 10 xx	CS	0	0
+INFO_DATABASE = Res<2			80 F1 47 02 50 +00	CS	0	0
+
+ //------------------------frame 3
+
+INFO_DATABASE = Req>3			80 47 F1 01 3E	CS	0	0
+INFO_DATABASE = Res<3			80 F1 47 01 7E	CS	0	0
+
+ //------------------------frame 4
+
+INFO_DATABASE = Req>4			80 47 F1 04 18 00 FF 00	CS	0	0
+INFO_DATABASE = Res<4			80 F1 47 04 58 01 93 61	CS	0	0
+
+ //------------------------frame 5
+
+INFO_DATABASE = Req>5			80 47 F1 04 18 01 FF 00	CS	0	0
+INFO_DATABASE = Res<5			80 F1 47 04 58 01 93 63	CS	0	0
+
+ //------------------------frame 6
+
+INFO_DATABASE = Req>6			80 47 F1 04 18 00 80 00	CS	0	0
+INFO_DATABASE = Res<6			80 F1 47 08 58 02 96 05 80 96 24 80	CS	0	0
+
+ //------------------------frame 7
+
+INFO_DATABASE = Req>7			80 47 F1 04 18 01 80 00	CS	0	0
+INFO_DATABASE = Res<7			80 F1 47 08 58 02 96 04 80 96 25 80	CS	0	0
+
+ //------------------------frame 8
+
+INFO_DATABASE = Req>8			80 47 F1 03 14 xx 00	CS	0	0
+INFO_DATABASE = Res<8			80 F1 47 03 54 +00 00	CS	0	0
+
+ //------------------------frame 9
+
+INFO_DATABASE = Req>9			80 47 F1 03 14 80 00	CS	0	0
+INFO_DATABASE = Res<9			80 F1 47 03 54 80 00	CS	0	0
+
+INFO_DATABASE = Req>9			80 47 F1 02 21 03	CS	0	0
+INFO_DATABASE = Res<9			80 F1 47 08 61 03 43 74 BA A1 49 40	CS	0	0
+
+INFO_DATABASE = Req>9			80 47 F1 06 3B 03 0F xx 00 00	CS	0	0
+INFO_DATABASE = Res<9			80 F1 47 06 7B 03 0F +00 00 00	CS	0	0
+
+INFO_DATABASE = Req>8			80 47 F1 02 1A 80	CS	0	0
+INFO_DATABASE = Res<8			80 F1 47 46 5A 80 00 04 80 96 25 80 04 80 96 25 80 04 80 96 25 80 04 80 96 25 80 04 80 96 25 80 04 80 96 25 80 04 80 96 25 80 04 80 96 25 80 04 80 96 25 80 04 80 96 25 80 04 80 96 25 80 04 80 96 25 80 04 80 96 25 80 04 80 96 25 80	CS	0	0
+
+
+
+###########################################
+#         End of DataBase                 #
+###########################################

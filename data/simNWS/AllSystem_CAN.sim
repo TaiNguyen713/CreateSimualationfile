@@ -1,0 +1,170 @@
+###########################################
+#         Auto Generated                  #
+###########################################
+<config sw> Protocol = 29
+<config sw> PIN_KRX_CANH = 6
+<config sw> TYPE_KRX_CANH = 0
+<config sw> VOLT_KRX_CANH = 3
+<config sw> PIN_KTX_CANH = 14
+<config sw> TYPE_KTX_CANH = 0
+<config sw> VOLT_KTX_CANH = 3
+<config sw> PIN_LRX_CANH =  6
+<config sw> TYPE_LTX_CANH = 0
+<config sw> VOLT_LTX_CANH = 3
+<config sw> VREF = 0
+<config sw> BAUDRATE = 500000
+<config sw> DATABIT = 0
+<config sw> PARITY = 0
+<config sw> TBYTE = 8
+<config sw> TFRAME = 10
+<config sw> F CAN NUMBER FRAME = 1
+<config sw> RANGE =   700,03 7F;
+###########################################
+#         End of config                   #
+###########################################
+SIZE_DATABASE = 27
+
+ //------------------------OBD2
+
+INFO_DATABASE = Req>1			00 00 07 DF 08 02 10 81 00 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<1			00 00 07 E8 08 02 50 +00 00 00 00 00 00	NONE	0	0
+
+INFO_DATABASE = Req>1			000007DF 08 01 20 00 00 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<1			000007E8 08 01 60 00 00 00 00 00 00	NONE	0	0
+
+INFO_DATABASE = Req>1			000007DF 08 02 01 00 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007E8 08 06 41 00 BF BF B9 93 00 	NONE	0	0
+
+INFO_DATABASE = Req>1			000007DF 08 02 01 20 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007E8 08 06 41 20 80 07 E0 19 00 	NONE	0	0
+
+INFO_DATABASE = Req>1			000007DF 08 02 01 40 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007E8 08 06 41 40 FA D0 00 00 00 	NONE	0	0
+
+INFO_DATABASE = Req>1			000007DF 08 02 01 01 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007E8 08 06 41 01 81 07 65 65 00 	NONE	0	0
+
+ //------------------------Init
+
+INFO_DATABASE = Req>1			00 00 07 xx 08  02 xx xx 00 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<1			00 00 07 +08 08  02 +40 +00 00 00 00 00 00	NONE	0	0
+
+INFO_DATABASE = Req>1			00 00 07 xx 08  02 10 xx 00 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<1			00 00 07 +08 08  02 50 +00 00 00 00 00 00	NONE	0	0
+
+INFO_DATABASE = Req>9			00 00 07 xx 08 03 22 12 A7 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<9			00 00 07 +08 08 03 62 12 A7 00 00 00 00	NONE	0	0
+
+INFO_DATABASE = Req>1			00 00 07 xx 08  02 06 00 00 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<1			00 00 07 +08 08  07 +40 01 02 03 04 05 06	NONE	0	0
+
+ //------------------------Keep alive
+INFO_DATABASE = Req>2			00 00 07 xx 08 02 3E 00 00 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<2			00 00 07 +08 08 02 7E 00 00 00 00 00 00	NONE	0	0
+
+INFO_DATABASE = Req>3			00 00 07 xx 08 04 27 02 00 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<3			00 00 07 +08 08 03 67 02 34 00 00 00 00	NONE	0	0
+
+INFO_DATABASE = Req>4			00 00 07 xx 08 02 27 01 00 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<4			00 00 07 +08 08 04 67 01 00 00 00 00 00	NONE	0	0
+
+ //------------------------Read DTC
+
+INFO_DATABASE = Req>4			00 00 07 xx  08  04 18 xx xx 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<4			00 00 07 +08  08  10 58 +00 +h0007 00 91 04 00	NONE	0	0
+INFO_DATABASE = Req>4			q-- 00 00 07 xx  08  30 xx xx xx 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<4			00 00 07 +08  08  21 01 37 60 ff ff 50 ff	NONE	0	0
+INFO_DATABASE = Res<4			00 00 07 +08  08  22 ff ff 50 ff ff ff 50	NONE	0	0
+INFO_DATABASE = Res<4			00 00 07 +08  08  23 ff ff ff ff ff ff ff	NONE	0	0
+INFO_DATABASE = Res<4			00 00 07 +08  08  24 ff ff ff ff ff ff ff	NONE	0	0
+INFO_DATABASE = Res<4			00 00 07 +08  08  25 ff ff ff ff ff ff ff	NONE	0	0
+
+INFO_DATABASE = Req>5			00 00 07 xx 08 04 18 xx FF 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<5			00 00 07 +08 08 08 58 02 04 53 40 12 35	NONE	0	0
+
+INFO_DATABASE = Req>6			00 00 07 xx 08 04 18 01 FF 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<6			00 00 07 +08 08 07 58 02 12 36 40 12 35	NONE	0	0
+
+INFO_DATABASE = Req>6			00 00 07 xx 08 04 18 02 FF 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<6			00 00 07 +08 08 07 58 02 12 36 40 12 35	NONE	0	0
+
+INFO_DATABASE = Req>7			00 00 07 xx 08 04 18 00 40 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<7			00 00 07 +08 08 07 58 02 04 53 00 12 35	NONE	0	0
+
+INFO_DATABASE = Req>8			00 00 07 xx 08 04 18 01 40 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<8			00 00 07 +08 08 07 58 02 12 36 40 12 35	NONE	0	0
+
+INFO_DATABASE = Req>8			00 00 07 xx 08 03 19 02 xx 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<8			00 00 07 +08 08 07 59 02 +00 53 25 00 00	NONE	0	0
+
+ //------------------------Erase
+
+INFO_DATABASE = Req>9			00 00 07 xx 08 03 14 40 00 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<9			00 00 07 +08 08 03 54 40 00 00 00 00 00	NONE	0	0
+
+INFO_DATABASE = Req>9			00 00 07 xx 08 03 14 FF 00 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res>9			00 00 07 +08 08 03 54 FF 00 00 00 00 00	NONE	0	0
+
+INFO_DATABASE = Req>9			00 00 07 xx 08 04 14 FF ff ff 00 00 00	NONE	0	0
+INFO_DATABASE = Res>9			00 00 07 +08 08 04 54 FF ff ff 00 00 00	NONE	0	0
+
+ //------------------------Exit
+
+INFO_DATABASE = Req>9			00 00 07 xx 08 01 20 00 00 00 00 00 00	NONE	0	0
+INFO_DATABASE = Req>9			00 00 07 +08 08 01 60 00 00 00 00 00 00	NONE	0	0
+
+//INFO_DATABASE = Req>4			00 00 07 xx  08  03 30 xx xx 00 00 00 00 	NONE	0	0
+//INFO_DATABASE = Res<4			00 00 07 +08  08  10 37 +h0006 +h0007 +h0008 ff ff ff	NONE	0	0
+//INFO_DATABASE = Req>4			q-- 00 00 07 xx  08  30 xx xx xx 00 00 00 00	NONE	0	0
+//INFO_DATABASE = Res<4			00 00 07 +08  08  21 ff ff ff ff ff ff ff	NONE	0	0
+//INFO_DATABASE = Res<4			00 00 07 +08  08  22 ff ff ff ff ff ff ff	NONE	0	0
+//INFO_DATABASE = Res<4			00 00 07 +08  08  23 ff ff ff ff ff ff ff	NONE	0	0
+//INFO_DATABASE = Res<4			00 00 07 +08  08  24 ff ff ff ff ff ff ff	NONE	0	0
+//INFO_DATABASE = Res<4			00 00 07 +08  08  25 ff ff ff ff ff ff ff	NONE	0	0
+//INFO_DATABASE = Res<4			00 00 07 +08  08  26 ff ff ff ff ff ff ff	NONE	0	0
+//INFO_DATABASE = Res<4			00 00 07 +08  08  27 ff ff ff ff ff ff ff	NONE	0	0
+
+
+INFO_DATABASE = Req>4			00 00 07 xx  08  02 21 xx 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<4			00 00 07 +08  08  10 41 61 +h0007 ff ff ff ff	NONE	0	0
+INFO_DATABASE = Req>4			q-- 00 00 07 xx  08  30 xx xx xx 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<4			00 00 07 +08  08  21 00 ff ff ff ff ff ff	NONE	0	0
+INFO_DATABASE = Res<4			00 00 07 +08  08  22 ff ff ff ff ff ff ff	NONE	0	0
+INFO_DATABASE = Res<4			00 00 07 +08  08  23 ff ff ff ff ff ff ff	NONE	0	0
+INFO_DATABASE = Res<4			00 00 07 +08  08  24 ff ff ff ff ff ff ff	NONE	0	0
+INFO_DATABASE = Res<4			00 00 07 +08  08  25 ff ff ff ff ff ff ff	NONE	0	0
+INFO_DATABASE = Res<4			00 00 07 +08  08  26 ff ff ff ff ff ff ff	NONE	0	0
+INFO_DATABASE = Res<4			00 00 07 +08  08  27 ff ff ff ff ff ff ff	NONE	0	0
+INFO_DATABASE = Res<4			00 00 07 +08  08  28 ff ff ff ff ff ff ff	NONE	0	0
+INFO_DATABASE = Res<4			00 00 07 +08  08  29 ff ff ff ff ff ff ff	NONE	0	0
+
+
+INFO_DATABASE = Req>4			00 00 07 xx  08  03 22 xx xx 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<4			00 00 07 +08  08  10 41 62 +h0007 +h0008 ff 00 00	NONE	0	0
+INFO_DATABASE = Req>4			q-- 00 00 07 xx  08  30 xx xx xx 00 00 00 00	NONE	0	0
+INFO_DATABASE = Res<4			00 00 07 +08  08  21 00 ff ff ff ff ff ff	NONE	0	0
+INFO_DATABASE = Res<4			00 00 07 +08  08  22 ff ff ff ff ff ff ff	NONE	0	0
+INFO_DATABASE = Res<4			00 00 07 +08  08  23 ff ff ff ff ff ff ff	NONE	0	0
+INFO_DATABASE = Res<4			00 00 07 +08  08  24 ff ff ff ff ff ff ff	NONE	0	0
+INFO_DATABASE = Res<4			00 00 07 +08  08  25 ff ff ff ff ff ff ff	NONE	0	0
+INFO_DATABASE = Res<4			00 00 07 +08  08  26 ff ff ff ff ff ff ff	NONE	0	0
+INFO_DATABASE = Res<4			00 00 07 +08  08  27 ff ff ff ff ff ff ff	NONE	0	0
+INFO_DATABASE = Res<4			00 00 07 +08  08  28 ff ff ff ff ff ff ff	NONE	0	0
+INFO_DATABASE = Res<4			00 00 07 +08  08  29 ff ff ff ff ff ff ff	NONE	0	0
+
+INFO_DATABASE = Req>4			00 00 07 xx  08  03 30 00 xx 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<4			00 00 07 +08  08  07 70 +h0006 +h0007 A7 00 E4 61	NONE	0	0
+
+INFO_DATABASE = Req>4			00 00 07 xx  08  03 30 20 xx 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<4			00 00 07 +08  08  07 70 +h0006 +h0007 78 00 C8 01	NONE	0	0
+
+INFO_DATABASE = Req>4			00 00 07 xx  08  03 30 40 xx 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<4			00 00 07 +08  08  07 70 +h0006 +h0007 F0 F0 CC 01	NONE	0	0
+
+INFO_DATABASE = Req>4			00 00 07 xx  08  03 30 60 xx 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<4			00 00 07 +08  08  07 70 +h0006 +h0007 A8 01 F0 92	NONE	0	0
+
+
+###########################################
+#         End of DataBase                 #
+###########################################

@@ -73,8 +73,8 @@ _NWS_PROFILE_COLS: list[str] = [
     'Vref', 'Baudrate', 'SerialDataFormat', 'Checksum', 'TimingWup',
     'TimingP', 'TimingW', 'xxTiming1281', 'Header', 'xxAutoFormat',
     'TagAddr/CanReq1', 'SourceAddr', 'CanStart1', 'CanEnd1', 'xxCanStart2',
-    'xxCanEnd2', 'FiveBaud', 'InitType', 'CMD Query', 'xxCMD ECUInfo',
-    'xxECUInfoType', 'CMD KeepAlive', 'CMD Read DTC', 'DtcReadType',
+    'xxCanEnd2', 'FiveBaud', 'InitType', 'CMD Query', 'CMD ECUInfo',
+    'ECUInfoType', 'CMD KeepAlive', 'CMD Read DTC', 'DtcReadType',
     'Offset', 'DTC Frame', 'DTC Format', 'LookupTable', 'DtcDisplayType',
     'CMD Erase', 'xxEraseType', 'SID Exit', 'Note',
 ]
@@ -120,7 +120,7 @@ def _discover_xlsx(folder: Path) -> list[Path]:
     return sorted(folder.rglob('*.xlsx'))
 
 
-def _file_matches_source(file: Path, xf: pd.ExcelFile, sheets: dict[str, SheetSpec]) -> str | None:
+def _file_matches_source(xf: pd.ExcelFile, sheets: dict[str, SheetSpec]) -> str | None:
     """Check whether an already-opened Excel file matches a source schema.
 
     Returns None  → file is valid for this source (has at least one sheet+columns match).
@@ -271,7 +271,7 @@ class DataLoader:
                 continue
 
             # ── validate against source schema ────────────────────────────────
-            mismatch = _file_matches_source(file, xf, ds.sheets)
+            mismatch = _file_matches_source(xf, ds.sheets)
             if mismatch:
                 _prompt_skip(file, mismatch)
                 continue  # user chose 'y' (skip); 'n' already called sys.exit

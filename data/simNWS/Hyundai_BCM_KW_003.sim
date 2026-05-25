@@ -1,0 +1,66 @@
+###########################################
+#         Auto Generated                  #
+###########################################
+<config sw> Protocol = 15
+<config sw> PIN_KRX_CANH = 7
+<config sw> TYPE_KRX_CANH = 0
+<config sw> VOLT_KRX_CANH = 3
+<config sw> PIN_KTX_CANH = 7
+<config sw> TYPE_KTX_CANH = 0
+<config sw> VOLT_KTX_CANH = 3
+<config sw> PIN_LRX_CANH =  7
+<config sw> TYPE_LTX_CANH = 0
+<config sw> VOLT_LTX_CANH = 3
+<config sw> VREF = 0
+<config sw> BAUDRATE = 10400
+<config sw> DATABIT = 0
+<config sw> PARITY = 0
+<config sw> TBYTE = 8
+<config sw> TFRAME = 10
+<config sw> F CAN NUMBER FRAME = 1
+<config sw> RANGE =  700,7FF;
+###########################################
+#         End of config                   #
+###########################################
+SIZE_DATABASE = 9
+
+ //------------------------frame 1
+
+INFO_DATABASE = Req>1			81 EB EA 81	CS	0	0
+INFO_DATABASE = Res<1			83 EA EB C1 E9 8F	CS	0	0
+
+ //------------------------frame 2
+
+INFO_DATABASE = Req>2			81 EB EA 3E	CS	0	0
+INFO_DATABASE = Res<2			81 EA EB 7E	CS	0	0
+
+ //------------------------frame 3
+
+INFO_DATABASE = Req>3			82 EB EA 21 0C	CS	0	0
+INFO_DATABASE = Res<3			88 EA EB 61 0C 00 00 00 ff ff ff	CS	0	0
+
+ //------------------------frame 4
+
+INFO_DATABASE = Req>4			82 EB EA 21 0D	CS	0	0
+INFO_DATABASE = Res<4			88 EA EB 61 0D ff ff ff ff ff ff	CS	0	0
+
+ //------------------------frame 5
+
+INFO_DATABASE = Req>5			83 EB EA 14 FF 00	CS	0	0
+INFO_DATABASE = Res<5			83 EA EB 54 FF 00	CS	0	0
+
+ //------------------------frame 6
+
+INFO_DATABASE = Req>6			81 EB EA 82	CS	0	0
+INFO_DATABASE = Res<6			83 EA EB C2 E9 8F	CS	0	0
+
+INFO_DATABASE = Req>6			05 EA 52 23 45 00	CS	0	0
+INFO_DATABASE = Res<6			05 52 EA 63 45 00	CS	0	0
+
+
+INFO_DATABASE = Req>6			04 EA 50 08 43	CS	0	0
+INFO_DATABASE = Res<6			04 50 EA 48 43	CS	0	0
+
+###########################################
+#         End of DataBase                 #
+###########################################

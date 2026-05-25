@@ -1,0 +1,65 @@
+###########################################
+#         Auto Generated                  #
+###########################################
+<config sw> Protocol = 15
+<config sw> PIN_KRX_CANH = 12
+<config sw> TYPE_KRX_CANH = 0
+<config sw> VOLT_KRX_CANH = 3
+<config sw> PIN_KTX_CANH = 12
+<config sw> TYPE_KTX_CANH = 0
+<config sw> VOLT_KTX_CANH = 3
+<config sw> PIN_LRX_CANH =  12
+<config sw> TYPE_LTX_CANH = 0
+<config sw> VOLT_LTX_CANH = 3
+<config sw> VREF = 0
+<config sw> BAUDRATE = 10400
+<config sw> DATABIT = 0
+<config sw> PARITY = 0
+<config sw> TBYTE = 8
+<config sw> TFRAME = 10
+<config sw> F CAN NUMBER FRAME = 1
+<config sw> RANGE =           7df,7df;
+###########################################
+#         End of config                   #
+###########################################
+SIZE_DATABASE = 14
+
+ //------------------------frame 1
+
+INFO_DATABASE = Req>1			>>36	NONE	0	0
+INFO_DATABASE = Res<1	t20		55	NONE	0	0
+INFO_DATABASE = Res<1	t50		08 08	NONE	0	0
+
+ //------------------------frame 2
+
+INFO_DATABASE = Req>2			q00 f7	NONE	0	0
+INFO_DATABASE = Res<2	t20		c9	NONE	0	0
+
+ //------------------------frame 3
+
+INFO_DATABASE = Req>3			68 6A F1 B1 29	CS	0	0
+INFO_DATABASE = Res<3			48 6B C0 F1 29 0F BF FE 01	CS	0	0
+INFO_DATABASE = Req>3			68 6A F1 BE	CS	0	0
+INFO_DATABASE = Res<3			48 6B C0 FE 32 47	CS	0	0
+
+ //------------------------frame 4
+
+INFO_DATABASE = Req>4			68 6A F1 B1 01	CS	0	0
+INFO_DATABASE = Res<4			48 6B C0 F1 01	CS	0	0 
+// 8A A5 00 95 11 95 13 93 88 93 91 93 61 93 67 93 78 94 05 94 02 93 32 93 27 00 00 00 00	CS	0	0
+
+ //------------------------frame 5
+
+INFO_DATABASE = Req>5			68 6A F1 13	CS	0	0
+INFO_DATABASE = Res<5			48 6B C0 53 93 82 A5 00 95 11 95 13 93 88 93 91 93 61 93 67 93 78 94 05 94 02 93 32 93 27 00 00 00 00	CS	0	0
+
+ //------------------------frame 6
+
+INFO_DATABASE = Req>9			68 6A F1 B3	CS	0	0
+INFO_DATABASE = Res<9			48 6B C0 F3 93 82 A5 00 95 11 95 13 93 88 93 91 93 61 93 67 93 78 94 05 94 02 93 32 93 27 00 00 00 00	CS	0	0
+ //------------------------frame 9
+INFO_DATABASE = Req>9			68 6A F1 14	CS	0	0
+INFO_DATABASE = Res<9			48 6B C0 54	CS	0	0
+###########################################
+#         End of DataBase                 #
+###########################################
