@@ -261,6 +261,20 @@ INFO_DATABASE = Res<1			 000007E8  08  24 00 0d 00 0e 00 0f 00 	NONE	0	0
 INFO_DATABASE = Res<1			 000007E8  08  25 10 00 11 00 12 00 13 	NONE	0	0
 INFO_DATABASE = Res<1			 000007E8  08  26 00 14 00 00 00 00 00 	NONE	0	0
 
+//--------------------------- A/C ---------------------------
+
+//System: A/C — NWS initialization
+//NOTE: System=A/C Profile=HMA_0049D DTC=0 Status=0
+INFO_DATABASE = Req>1			000007B3 08 02 10 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007BB 08 02 50 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Req>1			000007B3 08 02 3E 00 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007BB 08 02 7E 00 00 00 00 00 00 	NONE	0	0
+
+//System: A/C — DTC Read (Profile=HMA_0049D)
+//DTC: 0  Status: 0
+INFO_DATABASE = Req>1			000007B3 08 03 19 02 08 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007BB 08 06 59 02 FF 00 00 08 00 	NONE	0
+
 //------------------------- ABS/ESC -------------------------
 
 //System: ABS/ESC — NWS initialization
@@ -289,17 +303,1312 @@ INFO_DATABASE = Res<1			000007D9 08 21 08 51 75 01 08 56 2A 	NONE	0
 INFO_DATABASE = Res<1			000007D9 08 22 87 08 56 3B 86 08 58 	NONE	0
 INFO_DATABASE = Res<1			000007D9 08 23 47 86 08 58 47 87 08 	NONE	0
 
+//-------------------------- ADAS_P --------------------------
+
+//System: ADAS_P — NWS initialization
+//NOTE: System=ADAS_P Profile=HMA_0047B DTC=0 Status=0
+INFO_DATABASE = Req>1			000007B1 08 02 10 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007B9 08 02 50 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Req>1			000007B1 08 02 3E 00 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007B9 08 02 7E 00 00 00 00 00 00 	NONE	0	0
+
+//System: ADAS_P — DTC Read (Profile=HMA_0047B)
+//DTC: 0  Status: 0
+INFO_DATABASE = Req>1			000007B1 08 03 19 02 08 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007B9 08 06 59 02 FF 00 00 08 00 	NONE	0
+
+//--------------------------- AMP ---------------------------
+
+//System: AMP — NWS initialization
+//NOTE: System=AMP Profile=HMA_HK_00391 DTC=0 Status=0
+INFO_DATABASE = Req>1			00000783 08 02 10 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			0000078B 08 02 50 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Req>1			00000783 08 02 3E 00 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			0000078B 08 02 7E 00 00 00 00 00 00 	NONE	0	0
+
+//System: AMP — DTC Read (Profile=HMA_HK_00391)
+//DTC: 0  Status: 0
+INFO_DATABASE = Req>1			00000783 08 03 19 02 08 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1			0000078B 08 06 59 02 FF 00 00 08 00 	NONE	0
+
+//---------------------------- AT ----------------------------
+
+//System: AT — NWS initialization
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P060148 Status=0
+INFO_DATABASE = Req>1			000007E1 08 02 10 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007E9 08 02 50 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Req>1			000007E1 08 02 3E 00 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007E9 08 02 7E 00 00 00 00 00 00 	NONE	0	0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P06B011 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P06B311 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P070512 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P070514 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P07051C Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P070661 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P071512 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P071514 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P071603 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P071631 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P073E07 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P073E73 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P073E77 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P073F07 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P073F73 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P073F77 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P074A07 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P074A73 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P074A77 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P074B07 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P074B73 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P074B77 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P074C07 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P074C73 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P074C77 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P074D07 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P074D73 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P074D77 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P074E07 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P074E73 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P074E77 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P074F07 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P074F73 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P074F77 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P082008 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P082016 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P082017 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P08201C Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P090173 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P090B73 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P276512 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P276514 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P276603 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=P276631 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=U000188 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=U004686 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=U004687 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=U004688 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=U005587 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=U005588 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=U006486 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=U006488 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=U008086 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=U008087 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=U008088 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=U010087 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=U010300 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=U010308 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=U012187 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=U104688 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=U106488 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=U110087 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=U110341 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=U110382 Status=0
+//NOTE: System=AT Profile=HMA_HK_00390 DTC=U111788 Status=0
+
+//System: AT — DTC Read (Profile=HMA_HK_00390)
+//DTC: P060148  Status: 0
+//DTC: P06B011  Status: 0
+//DTC: P06B311  Status: 0
+//DTC: P070512  Status: 0
+//DTC: P070514  Status: 0
+//DTC: P07051C  Status: 0
+//DTC: P070661  Status: 0
+//DTC: P071512  Status: 0
+//DTC: P071514  Status: 0
+//DTC: P071603  Status: 0
+//DTC: P071631  Status: 0
+//DTC: P073E07  Status: 0
+//DTC: P073E73  Status: 0
+//DTC: P073E77  Status: 0
+//DTC: P073F07  Status: 0
+//DTC: P073F73  Status: 0
+//DTC: P073F77  Status: 0
+//DTC: P074A07  Status: 0
+//DTC: P074A73  Status: 0
+//DTC: P074A77  Status: 0
+//DTC: P074B07  Status: 0
+//DTC: P074B73  Status: 0
+//DTC: P074B77  Status: 0
+//DTC: P074C07  Status: 0
+//DTC: P074C73  Status: 0
+//DTC: P074C77  Status: 0
+//DTC: P074D07  Status: 0
+//DTC: P074D73  Status: 0
+//DTC: P074D77  Status: 0
+//DTC: P074E07  Status: 0
+//DTC: P074E73  Status: 0
+//DTC: P074E77  Status: 0
+//DTC: P074F07  Status: 0
+//DTC: P074F73  Status: 0
+//DTC: P074F77  Status: 0
+//DTC: P082008  Status: 0
+//DTC: P082016  Status: 0
+//DTC: P082017  Status: 0
+//DTC: P08201C  Status: 0
+//DTC: P090173  Status: 0
+//DTC: P090B73  Status: 0
+//DTC: P276512  Status: 0
+//DTC: P276514  Status: 0
+//DTC: P276603  Status: 0
+//DTC: P276631  Status: 0
+//DTC: U000188  Status: 0
+//DTC: U004686  Status: 0
+//DTC: U004687  Status: 0
+//DTC: U004688  Status: 0
+//DTC: U005587  Status: 0
+//DTC: U005588  Status: 0
+//DTC: U006486  Status: 0
+//DTC: U006488  Status: 0
+//DTC: U008086  Status: 0
+//DTC: U008087  Status: 0
+//DTC: U008088  Status: 0
+//DTC: U010087  Status: 0
+//DTC: U010300  Status: 0
+//DTC: U010308  Status: 0
+//DTC: U012187  Status: 0
+//DTC: U104688  Status: 0
+//DTC: U106488  Status: 0
+//DTC: U110087  Status: 0
+//DTC: U110341  Status: 0
+//DTC: U110382  Status: 0
+//DTC: U111788  Status: 0
+INFO_DATABASE = Req>1			000007E1 08 03 19 02 0D 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007E9 08 11 0B 59 02 FF 06 01 48 	NONE	0
+INFO_DATABASE = Req>1			Q-- 000007E1 08 30 xx xx 00 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007E9 08 21 00 06 B0 11 00 06 B3 	NONE	0
+INFO_DATABASE = Res<1			000007E9 08 22 11 00 07 05 12 00 07 	NONE	0
+INFO_DATABASE = Res<1			000007E9 08 23 05 14 00 07 05 1C 00 	NONE	0
+INFO_DATABASE = Res<1			000007E9 08 24 07 06 61 00 07 15 12 	NONE	0
+INFO_DATABASE = Res<1			000007E9 08 25 00 07 15 14 00 07 16 	NONE	0
+INFO_DATABASE = Res<1			000007E9 08 26 03 00 07 16 31 00 07 	NONE	0
+INFO_DATABASE = Res<1			000007E9 08 27 3E 07 00 07 3E 73 00 	NONE	0
+INFO_DATABASE = Res<1			000007E9 08 28 07 3E 77 00 07 3F 07 	NONE	0
+INFO_DATABASE = Res<1			000007E9 08 29 00 07 3F 73 00 07 3F 	NONE	0
+INFO_DATABASE = Res<1			000007E9 08 2A 77 00 07 4A 07 00 07 	NONE	0
+INFO_DATABASE = Res<1			000007E9 08 2B 4A 73 00 07 4A 77 00 	NONE	0
+INFO_DATABASE = Res<1			000007E9 08 2C 07 4B 07 00 07 4B 73 	NONE	0
+INFO_DATABASE = Res<1			000007E9 08 2D 00 07 4B 77 00 07 4C 	NONE	0
+INFO_DATABASE = Res<1			000007E9 08 2E 07 00 07 4C 73 00 07 	NONE	0
+INFO_DATABASE = Res<1			000007E9 08 2F 4C 77 00 07 4D 07 00 	NONE	0
+INFO_DATABASE = Res<1			000007E9 08 20 07 4D 73 00 07 4D 77 	NONE	0
+INFO_DATABASE = Res<1			000007E9 08 21 00 07 4E 07 00 07 4E 	NONE	0
+INFO_DATABASE = Res<1			000007E9 08 22 73 00 07 4E 77 00 07 	NONE	0
+INFO_DATABASE = Res<1			000007E9 08 23 4F 07 00 07 4F 73 00 	NONE	0
+INFO_DATABASE = Res<1			000007E9 08 24 07 4F 77 00 08 20 08 	NONE	0
+INFO_DATABASE = Res<1			000007E9 08 25 00 08 20 16 00 08 20 	NONE	0
+INFO_DATABASE = Res<1			000007E9 08 26 17 00 08 20 1C 00 09 	NONE	0
+INFO_DATABASE = Res<1			000007E9 08 27 01 73 00 09 0B 73 00 	NONE	0
+INFO_DATABASE = Res<1			000007E9 08 28 27 65 12 00 27 65 14 	NONE	0
+INFO_DATABASE = Res<1			000007E9 08 29 00 27 66 03 00 27 66 	NONE	0
+INFO_DATABASE = Res<1			000007E9 08 2A 31 00 C0 01 88 00 C0 	NONE	0
+INFO_DATABASE = Res<1			000007E9 08 2B 46 86 00 C0 46 87 00 	NONE	0
+INFO_DATABASE = Res<1			000007E9 08 2C C0 46 88 00 C0 55 87 	NONE	0
+INFO_DATABASE = Res<1			000007E9 08 2D 00 C0 55 88 00 C0 64 	NONE	0
+INFO_DATABASE = Res<1			000007E9 08 2E 86 00 C0 64 88 00 C0 	NONE	0
+INFO_DATABASE = Res<1			000007E9 08 2F 80 86 00 C0 80 87 00 	NONE	0
+INFO_DATABASE = Res<1			000007E9 08 20 C0 80 88 00 C1 00 87 	NONE	0
+INFO_DATABASE = Res<1			000007E9 08 21 00 C1 03 00 00 C1 03 	NONE	0
+INFO_DATABASE = Res<1			000007E9 08 22 08 00 C1 21 87 00 D0 	NONE	0
+INFO_DATABASE = Res<1			000007E9 08 23 46 88 00 D0 64 88 00 	NONE	0
+INFO_DATABASE = Res<1			000007E9 08 24 D1 00 87 00 D1 03 41 	NONE	0
+INFO_DATABASE = Res<1			000007E9 08 25 00 D1 03 82 00 D1 17 	NONE	0
+INFO_DATABASE = Res<1			000007E9 08 26 88 00 00 00 00 00 00 	NONE	0
+
+//--------------------------- AVMS ---------------------------
+
+//System: AVMS — NWS initialization
+//NOTE: System=AVMS Profile=HMA_003F2 DTC=0 Status=0
+INFO_DATABASE = Req>1			00000793 08 02 10 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			0000079B 08 02 50 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Req>1			00000793 08 02 3E 00 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			0000079B 08 02 7E 00 00 00 00 00 00 	NONE	0	0
+
+//System: AVMS — DTC Read (Profile=HMA_003F2)
+//DTC: 0  Status: 0
+INFO_DATABASE = Req>1			00000793 08 03 19 02 08 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1			0000079B 08 06 59 02 FF 00 00 08 00 	NONE	0
+
+//--------------------------- AVN ---------------------------
+
+//System: AVN — NWS initialization
+//NOTE: System=AVN Profile=HMA_003C2 DTC=0 Status=0
+INFO_DATABASE = Req>1			00000780 08 02 10 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			00000788 08 02 50 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Req>1			00000780 08 02 3E 00 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			00000788 08 02 7E 00 00 00 00 00 00 	NONE	0	0
+
+//System: AVN — DTC Read (Profile=HMA_003C2)
+//DTC: 0  Status: 0
+INFO_DATABASE = Req>1			00000780 08 03 19 02 08 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1			00000788 08 06 59 02 FF 00 00 08 00 	NONE	0
+
+//--------------------------- CLU ---------------------------
+
+//System: CLU — NWS initialization
+//NOTE: System=CLU Profile=HMA_00470 DTC=0 Status=0
+INFO_DATABASE = Req>1			000007C6 08 02 10 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007CE 08 02 50 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Req>1			000007C6 08 02 3E 00 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007CE 08 02 7E 00 00 00 00 00 00 	NONE	0	0
+
+//System: CLU — DTC Read (Profile=HMA_00470)
+//DTC: 0  Status: 0
+INFO_DATABASE = Req>1			000007C6 08 03 19 02 08 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007CE 08 06 59 02 FF 00 00 08 00 	NONE	0
+
+//--------------------------- DDM ---------------------------
+
+//System: DDM — NWS initialization
+//NOTE: System=DDM Profile=HMA_00270 DTC=0 Status=0
+INFO_DATABASE = Req>1			000007A1 08 02 10 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007A9 08 02 50 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Req>1			000007A1 08 02 3E 00 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007A9 08 02 7E 00 00 00 00 00 00 	NONE	0	0
+
+//System: DDM — DTC Read (Profile=HMA_00270)
+//DTC: 0  Status: 0
+INFO_DATABASE = Req>1			000007A1 08 03 19 02 08 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007A9 08 06 59 02 FF 00 00 08 00 	NONE	0
+
+//------------------------ E-Shifter ------------------------
+
+//System: E-Shifter — NWS initialization
+//NOTE: System=E-Shifter Profile=HMA_003F7 DTC=0 Status=0
+INFO_DATABASE = Req>1			000007B6 08 02 10 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007BE 08 02 50 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Req>1			000007B6 08 02 3E 00 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007BE 08 02 7E 00 00 00 00 00 00 	NONE	0	0
+
+//System: E-Shifter — DTC Read (Profile=HMA_003F7)
+//DTC: 0  Status: 0
+INFO_DATABASE = Req>1			000007B6 08 03 19 02 0D 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007BE 08 06 59 02 FF 00 00 00 00 	NONE	0
+
+//--------------------------- ECM ---------------------------
+
+//System: ECM — NWS initialization
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P000A00 Status=0
+INFO_DATABASE = Req>1			000007E0 08 02 10 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007E8 08 02 50 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Req>1			000007E0 08 02 3E 00 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007E8 08 02 7E 00 00 00 00 00 00 	NONE	0	0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P000B00 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P001000 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P001100 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P001400 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P001600 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P001662 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P001679 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P001695 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P001700 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P001779 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P001795 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P003000 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P003100 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P003200 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P003400 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P003500 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P003600 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P003700 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P003800 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P004500 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P004700 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P004800 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P004900 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P007000 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P007100 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P008700 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P008709 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P008784 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P0087F0 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P008800 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P008807 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P0088F0 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P0088F1 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P00D100 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P00D200 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P00DF23 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P00DF24 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P010600 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P010629 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P0106F1 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P010700 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P010800 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P011100 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P0111F0 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P0111F1 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P011200 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P011211 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P011300 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P011313 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P011400 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P011600 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P011623 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P011624 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P0116F0 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P011700 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P011800 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P011900 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P012100 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P012200 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P012300 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P013100 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P013200 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P013300 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P013600 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P013700 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P013800 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P013A00 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P013B00 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P013E00 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P013F00 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P019200 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P019221 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P019300 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P019322 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P019600 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P019611 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P019612 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P0196F0 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P0196F1 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P019800 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P019900 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P01E700 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P020100 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P020113 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P020200 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P020213 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P020300 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P020313 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P020400 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P020413 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P022100 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P022200 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P022300 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P023400 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P023600 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P023700 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P023800 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P024400 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P026100 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P026200 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P026400 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P026500 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P026700 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P026800 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P027000 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P027100 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P029900 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P02CC00 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P02CD00 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P02CE00 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P02CF00 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P02D000 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P02D100 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P02D200 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P02D300 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P030100 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P030200 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P030300 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P030400 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P031500 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P031554 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P033600 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P033603 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P033625 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P03362F Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P033700 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P033714 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P033800 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P033815 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P034100 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P03412F Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P03413A Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P034200 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P034214 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P034300 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P034315 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P034A00 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P036600 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P03662F Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P03663A Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P036700 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P036714 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P036815 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P037100 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P044100 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P044172 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P044200 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P04427A Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P044400 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P044413 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P044700 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P044713 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P045100 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P04512A Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P045184 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P045185 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P045200 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P045211 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P045300 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P045312 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P045400 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P045429 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P045500 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P045507 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P04557A Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P045600 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P045800 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P045812 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P045900 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P045911 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P046200 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P046216 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P046300 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P046317 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P049800 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P049811 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P049900 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P049912 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P050400 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P050600 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P050700 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P050A00 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P050A84 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P050A85 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P053200 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P053300 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P053F00 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P053F84 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P053F85 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P05CC00 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P05CE00 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P060500 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P060547 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P0605F6 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P061BF8 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P061C00 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P061CFE Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P062D00 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P063000 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P064D00 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P064D49 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P064DF0 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P107500 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P107513 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P1075F0 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P107600 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P107700 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P206600 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P206700 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P206800 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P208800 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P2088F0 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P208900 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P2089F0 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P210000 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P210013 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P212200 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P212300 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P212700 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P212800 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P213577 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P213800 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P215900 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P215931 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P2159F0 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P217700 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P217800 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P219500 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P219600 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P219C00 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P219D00 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P219E00 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P219F00 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P222800 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P222900 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P223700 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P224300 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P225100 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P226100 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P227000 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P227100 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P229700 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P23F200 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P23F300 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P23F400 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P23F500 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P241400 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P242200 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P242273 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P262600 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P2BEC00 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P2BECF0 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P2BED00 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P2BEDF0 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P2BEDF1 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P2BF000 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P2BF0F0 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P2BF0F1 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P2BF100 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P2BF1F0 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=P2BF1F1 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=U000100 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=U0001F0 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=U0001F1 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=U010100 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=U0101F9 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=U0101FA Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=U0101FB Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=U0101FC Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=U012100 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=U012200 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=U012600 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=U012A00 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=U015500 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=U0155F0 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=U016400 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=U0164F0 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=U0164F1 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=U041600 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=U042B00 Status=0
+//NOTE: System=ECM Profile=HMA_HK_00389 DTC=U111100 Status=0
+
+//System: ECM — DTC Read (Profile=HMA_HK_00389)
+//DTC: P000A00  Status: 0
+//DTC: P000B00  Status: 0
+//DTC: P001000  Status: 0
+//DTC: P001100  Status: 0
+//DTC: P001400  Status: 0
+//DTC: P001600  Status: 0
+//DTC: P001662  Status: 0
+//DTC: P001679  Status: 0
+//DTC: P001695  Status: 0
+//DTC: P001700  Status: 0
+//DTC: P001779  Status: 0
+//DTC: P001795  Status: 0
+//DTC: P003000  Status: 0
+//DTC: P003100  Status: 0
+//DTC: P003200  Status: 0
+//DTC: P003400  Status: 0
+//DTC: P003500  Status: 0
+//DTC: P003600  Status: 0
+//DTC: P003700  Status: 0
+//DTC: P003800  Status: 0
+//DTC: P004500  Status: 0
+//DTC: P004700  Status: 0
+//DTC: P004800  Status: 0
+//DTC: P004900  Status: 0
+//DTC: P007000  Status: 0
+//DTC: P007100  Status: 0
+//DTC: P008700  Status: 0
+//DTC: P008709  Status: 0
+//DTC: P008784  Status: 0
+//DTC: P0087F0  Status: 0
+//DTC: P008800  Status: 0
+//DTC: P008807  Status: 0
+//DTC: P0088F0  Status: 0
+//DTC: P0088F1  Status: 0
+//DTC: P00D100  Status: 0
+//DTC: P00D200  Status: 0
+//DTC: P00DF23  Status: 0
+//DTC: P00DF24  Status: 0
+//DTC: P010600  Status: 0
+//DTC: P010629  Status: 0
+//DTC: P0106F1  Status: 0
+//DTC: P010700  Status: 0
+//DTC: P010800  Status: 0
+//DTC: P011100  Status: 0
+//DTC: P0111F0  Status: 0
+//DTC: P0111F1  Status: 0
+//DTC: P011200  Status: 0
+//DTC: P011211  Status: 0
+//DTC: P011300  Status: 0
+//DTC: P011313  Status: 0
+//DTC: P011400  Status: 0
+//DTC: P011600  Status: 0
+//DTC: P011623  Status: 0
+//DTC: P011624  Status: 0
+//DTC: P0116F0  Status: 0
+//DTC: P011700  Status: 0
+//DTC: P011800  Status: 0
+//DTC: P011900  Status: 0
+//DTC: P012100  Status: 0
+//DTC: P012200  Status: 0
+//DTC: P012300  Status: 0
+//DTC: P013100  Status: 0
+//DTC: P013200  Status: 0
+//DTC: P013300  Status: 0
+//DTC: P013600  Status: 0
+//DTC: P013700  Status: 0
+//DTC: P013800  Status: 0
+//DTC: P013A00  Status: 0
+//DTC: P013B00  Status: 0
+//DTC: P013E00  Status: 0
+//DTC: P013F00  Status: 0
+//DTC: P019200  Status: 0
+//DTC: P019221  Status: 0
+//DTC: P019300  Status: 0
+//DTC: P019322  Status: 0
+//DTC: P019600  Status: 0
+//DTC: P019611  Status: 0
+//DTC: P019612  Status: 0
+//DTC: P0196F0  Status: 0
+//DTC: P0196F1  Status: 0
+//DTC: P019800  Status: 0
+//DTC: P019900  Status: 0
+//DTC: P01E700  Status: 0
+//DTC: P020100  Status: 0
+//DTC: P020113  Status: 0
+//DTC: P020200  Status: 0
+//DTC: P020213  Status: 0
+//DTC: P020300  Status: 0
+//DTC: P020313  Status: 0
+//DTC: P020400  Status: 0
+//DTC: P020413  Status: 0
+//DTC: P022100  Status: 0
+//DTC: P022200  Status: 0
+//DTC: P022300  Status: 0
+//DTC: P023400  Status: 0
+//DTC: P023600  Status: 0
+//DTC: P023700  Status: 0
+//DTC: P023800  Status: 0
+//DTC: P024400  Status: 0
+//DTC: P026100  Status: 0
+//DTC: P026200  Status: 0
+//DTC: P026400  Status: 0
+//DTC: P026500  Status: 0
+//DTC: P026700  Status: 0
+//DTC: P026800  Status: 0
+//DTC: P027000  Status: 0
+//DTC: P027100  Status: 0
+//DTC: P029900  Status: 0
+//DTC: P02CC00  Status: 0
+//DTC: P02CD00  Status: 0
+//DTC: P02CE00  Status: 0
+//DTC: P02CF00  Status: 0
+//DTC: P02D000  Status: 0
+//DTC: P02D100  Status: 0
+//DTC: P02D200  Status: 0
+//DTC: P02D300  Status: 0
+//DTC: P030100  Status: 0
+//DTC: P030200  Status: 0
+//DTC: P030300  Status: 0
+//DTC: P030400  Status: 0
+//DTC: P031500  Status: 0
+//DTC: P031554  Status: 0
+//DTC: P033600  Status: 0
+//DTC: P033603  Status: 0
+//DTC: P033625  Status: 0
+//DTC: P03362F  Status: 0
+//DTC: P033700  Status: 0
+//DTC: P033714  Status: 0
+//DTC: P033800  Status: 0
+//DTC: P033815  Status: 0
+//DTC: P034100  Status: 0
+//DTC: P03412F  Status: 0
+//DTC: P03413A  Status: 0
+//DTC: P034200  Status: 0
+//DTC: P034214  Status: 0
+//DTC: P034300  Status: 0
+//DTC: P034315  Status: 0
+//DTC: P034A00  Status: 0
+//DTC: P036600  Status: 0
+//DTC: P03662F  Status: 0
+//DTC: P03663A  Status: 0
+//DTC: P036700  Status: 0
+//DTC: P036714  Status: 0
+//DTC: P036815  Status: 0
+//DTC: P037100  Status: 0
+//DTC: P044100  Status: 0
+//DTC: P044172  Status: 0
+//DTC: P044200  Status: 0
+//DTC: P04427A  Status: 0
+//DTC: P044400  Status: 0
+//DTC: P044413  Status: 0
+//DTC: P044700  Status: 0
+//DTC: P044713  Status: 0
+//DTC: P045100  Status: 0
+//DTC: P04512A  Status: 0
+//DTC: P045184  Status: 0
+//DTC: P045185  Status: 0
+//DTC: P045200  Status: 0
+//DTC: P045211  Status: 0
+//DTC: P045300  Status: 0
+//DTC: P045312  Status: 0
+//DTC: P045400  Status: 0
+//DTC: P045429  Status: 0
+//DTC: P045500  Status: 0
+//DTC: P045507  Status: 0
+//DTC: P04557A  Status: 0
+//DTC: P045600  Status: 0
+//DTC: P045800  Status: 0
+//DTC: P045812  Status: 0
+//DTC: P045900  Status: 0
+//DTC: P045911  Status: 0
+//DTC: P046200  Status: 0
+//DTC: P046216  Status: 0
+//DTC: P046300  Status: 0
+//DTC: P046317  Status: 0
+//DTC: P049800  Status: 0
+//DTC: P049811  Status: 0
+//DTC: P049900  Status: 0
+//DTC: P049912  Status: 0
+//DTC: P050400  Status: 0
+//DTC: P050600  Status: 0
+//DTC: P050700  Status: 0
+//DTC: P050A00  Status: 0
+//DTC: P050A84  Status: 0
+//DTC: P050A85  Status: 0
+//DTC: P053200  Status: 0
+//DTC: P053300  Status: 0
+//DTC: P053F00  Status: 0
+//DTC: P053F84  Status: 0
+//DTC: P053F85  Status: 0
+//DTC: P05CC00  Status: 0
+//DTC: P05CE00  Status: 0
+//DTC: P060500  Status: 0
+//DTC: P060547  Status: 0
+//DTC: P0605F6  Status: 0
+//DTC: P061BF8  Status: 0
+//DTC: P061C00  Status: 0
+//DTC: P061CFE  Status: 0
+//DTC: P062D00  Status: 0
+//DTC: P063000  Status: 0
+//DTC: P064D00  Status: 0
+//DTC: P064D49  Status: 0
+//DTC: P064DF0  Status: 0
+//DTC: P107500  Status: 0
+//DTC: P107513  Status: 0
+//DTC: P1075F0  Status: 0
+//DTC: P107600  Status: 0
+//DTC: P107700  Status: 0
+//DTC: P206600  Status: 0
+//DTC: P206700  Status: 0
+//DTC: P206800  Status: 0
+//DTC: P208800  Status: 0
+//DTC: P2088F0  Status: 0
+//DTC: P208900  Status: 0
+//DTC: P2089F0  Status: 0
+//DTC: P210000  Status: 0
+//DTC: P210013  Status: 0
+//DTC: P212200  Status: 0
+//DTC: P212300  Status: 0
+//DTC: P212700  Status: 0
+//DTC: P212800  Status: 0
+//DTC: P213577  Status: 0
+//DTC: P213800  Status: 0
+//DTC: P215900  Status: 0
+//DTC: P215931  Status: 0
+//DTC: P2159F0  Status: 0
+//DTC: P217700  Status: 0
+//DTC: P217800  Status: 0
+//DTC: P219500  Status: 0
+//DTC: P219600  Status: 0
+//DTC: P219C00  Status: 0
+//DTC: P219D00  Status: 0
+//DTC: P219E00  Status: 0
+//DTC: P219F00  Status: 0
+//DTC: P222800  Status: 0
+//DTC: P222900  Status: 0
+//DTC: P223700  Status: 0
+//DTC: P224300  Status: 0
+//DTC: P225100  Status: 0
+//DTC: P226100  Status: 0
+//DTC: P227000  Status: 0
+//DTC: P227100  Status: 0
+//DTC: P229700  Status: 0
+//DTC: P23F200  Status: 0
+//DTC: P23F300  Status: 0
+//DTC: P23F400  Status: 0
+//DTC: P23F500  Status: 0
+//DTC: P241400  Status: 0
+//DTC: P242200  Status: 0
+//DTC: P242273  Status: 0
+//DTC: P262600  Status: 0
+//DTC: P2BEC00  Status: 0
+//DTC: P2BECF0  Status: 0
+//DTC: P2BED00  Status: 0
+//DTC: P2BEDF0  Status: 0
+//DTC: P2BEDF1  Status: 0
+//DTC: P2BF000  Status: 0
+//DTC: P2BF0F0  Status: 0
+//DTC: P2BF0F1  Status: 0
+//DTC: P2BF100  Status: 0
+//DTC: P2BF1F0  Status: 0
+//DTC: P2BF1F1  Status: 0
+//DTC: U000100  Status: 0
+//DTC: U0001F0  Status: 0
+//DTC: U0001F1  Status: 0
+//DTC: U010100  Status: 0
+//DTC: U0101F9  Status: 0
+//DTC: U0101FA  Status: 0
+//DTC: U0101FB  Status: 0
+//DTC: U0101FC  Status: 0
+//DTC: U012100  Status: 0
+//DTC: U012200  Status: 0
+//DTC: U012600  Status: 0
+//DTC: U012A00  Status: 0
+//DTC: U015500  Status: 0
+//DTC: U0155F0  Status: 0
+//DTC: U016400  Status: 0
+//DTC: U0164F0  Status: 0
+//DTC: U0164F1  Status: 0
+//DTC: U041600  Status: 0
+//DTC: U042B00  Status: 0
+//DTC: U111100  Status: 0
+INFO_DATABASE = Req>1			000007E0 08 03 19 02 8D 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 14 6B 59 02 FF 00 0A 00 	NONE	0
+INFO_DATABASE = Req>1			Q-- 000007E0 08 30 xx xx 00 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 21 00 00 0B 00 00 00 10 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 22 00 00 00 11 00 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 23 14 00 00 00 16 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 24 00 16 62 00 00 16 79 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 25 00 00 16 95 00 00 17 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 26 00 00 00 17 79 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 27 17 95 00 00 30 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 28 00 31 00 00 00 32 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 29 00 00 34 00 00 00 35 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2A 00 00 00 36 00 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2B 37 00 00 00 38 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2C 00 45 00 00 00 47 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2D 00 00 48 00 00 00 49 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2E 00 00 00 70 00 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2F 71 00 00 00 87 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 20 00 87 09 00 00 87 84 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 21 00 00 87 F0 00 00 88 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 22 00 00 00 88 07 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 23 88 F0 00 00 88 F1 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 24 00 D1 00 00 00 D2 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 25 00 00 DF 23 00 00 DF 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 26 24 00 01 06 00 00 01 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 27 06 29 00 01 06 F1 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 28 01 07 00 00 01 08 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 29 00 01 11 00 00 01 11 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2A F0 00 01 11 F1 00 01 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2B 12 00 00 01 12 11 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2C 01 13 00 00 01 13 13 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2D 00 01 14 00 00 01 16 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2E 00 00 01 16 23 00 01 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2F 16 24 00 01 16 F0 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 20 01 17 00 00 01 18 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 21 00 01 19 00 00 01 21 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 22 00 00 01 22 00 00 01 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 23 23 00 00 01 31 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 24 01 32 00 00 01 33 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 25 00 01 36 00 00 01 37 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 26 00 00 01 38 00 00 01 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 27 3A 00 00 01 3B 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 28 01 3E 00 00 01 3F 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 29 00 01 92 00 00 01 92 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2A 21 00 01 93 00 00 01 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2B 93 22 00 01 96 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2C 01 96 11 00 01 96 12 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2D 00 01 96 F0 00 01 96 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2E F1 00 01 98 00 00 01 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2F 99 00 00 01 E7 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 20 02 01 00 00 02 01 13 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 21 00 02 02 00 00 02 02 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 22 13 00 02 03 00 00 02 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 23 03 13 00 02 04 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 24 02 04 13 00 02 21 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 25 00 02 22 00 00 02 23 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 26 00 00 02 34 00 00 02 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 27 36 00 00 02 37 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 28 02 38 00 00 02 44 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 29 00 02 61 00 00 02 62 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2A 00 00 02 64 00 00 02 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2B 65 00 00 02 67 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2C 02 68 00 00 02 70 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2D 00 02 71 00 00 02 99 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2E 00 00 02 CC 00 00 02 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2F CD 00 00 02 CE 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 20 02 CF 00 00 02 D0 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 21 00 02 D1 00 00 02 D2 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 22 00 00 02 D3 00 00 03 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 23 01 00 00 03 02 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 24 03 03 00 00 03 04 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 25 00 03 15 00 00 03 15 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 26 54 00 03 36 00 00 03 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 27 36 03 00 03 36 25 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 28 03 36 2F 00 03 37 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 29 00 03 37 14 00 03 38 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2A 00 00 03 38 15 00 03 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2B 41 00 00 03 41 2F 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2C 03 41 3A 00 03 42 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2D 00 03 42 14 00 03 43 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2E 00 00 03 43 15 00 03 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2F 4A 00 00 03 66 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 20 03 66 2F 00 03 66 3A 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 21 00 03 67 00 00 03 67 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 22 14 00 03 68 15 00 03 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 23 71 00 00 04 41 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 24 04 41 72 00 04 42 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 25 00 04 42 7A 00 04 44 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 26 00 00 04 44 13 00 04 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 27 47 00 00 04 47 13 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 28 04 51 00 00 04 51 2A 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 29 00 04 51 84 00 04 51 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2A 85 00 04 52 00 00 04 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2B 52 11 00 04 53 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2C 04 53 12 00 04 54 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2D 00 04 54 29 00 04 55 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2E 00 00 04 55 07 00 04 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2F 55 7A 00 04 56 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 20 04 58 00 00 04 58 12 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 21 00 04 59 00 00 04 59 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 22 11 00 04 62 00 00 04 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 23 62 16 00 04 63 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 24 04 63 17 00 04 98 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 25 00 04 98 11 00 04 99 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 26 00 00 04 99 12 00 05 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 27 04 00 00 05 06 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 28 05 07 00 00 05 0A 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 29 00 05 0A 84 00 05 0A 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2A 85 00 05 32 00 00 05 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2B 33 00 00 05 3F 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2C 05 3F 84 00 05 3F 85 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2D 00 05 CC 00 00 05 CE 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2E 00 00 06 05 00 00 06 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2F 05 47 00 06 05 F6 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 20 06 1B F8 00 06 1C 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 21 00 06 1C FE 00 06 2D 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 22 00 00 06 30 00 00 06 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 23 4D 00 00 06 4D 49 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 24 06 4D F0 00 10 75 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 25 00 10 75 13 00 10 75 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 26 F0 00 10 76 00 00 10 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 27 77 00 00 20 66 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 28 20 67 00 00 20 68 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 29 00 20 88 00 00 20 88 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2A F0 00 20 89 00 00 20 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2B 89 F0 00 21 00 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2C 21 00 13 00 21 22 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2D 00 21 23 00 00 21 27 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2E 00 00 21 28 00 00 21 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2F 35 77 00 21 38 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 20 21 59 00 00 21 59 31 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 21 00 21 59 F0 00 21 77 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 22 00 00 21 78 00 00 21 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 23 95 00 00 21 96 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 24 21 9C 00 00 21 9D 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 25 00 21 9E 00 00 21 9F 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 26 00 00 22 28 00 00 22 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 27 29 00 00 22 37 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 28 22 43 00 00 22 51 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 29 00 22 61 00 00 22 70 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2A 00 00 22 71 00 00 22 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2B 97 00 00 23 F2 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2C 23 F3 00 00 23 F4 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2D 00 23 F5 00 00 24 14 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2E 00 00 24 22 00 00 24 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2F 22 73 00 26 26 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 20 2B EC 00 00 2B EC F0 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 21 00 2B ED 00 00 2B ED 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 22 F0 00 2B ED F1 00 2B 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 23 F0 00 00 2B F0 F0 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 24 2B F0 F1 00 2B F1 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 25 00 2B F1 F0 00 2B F1 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 26 F1 00 C0 01 00 00 C0 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 27 01 F0 00 C0 01 F1 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 28 C1 01 00 00 C1 01 F9 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 29 00 C1 01 FA 00 C1 01 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2A FB 00 C1 01 FC 00 C1 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2B 21 00 00 C1 22 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2C C1 26 00 00 C1 2A 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2D 00 C1 55 00 00 C1 55 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2E F0 00 C1 64 00 00 C1 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 2F 64 F0 00 C1 64 F1 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 20 C4 16 00 00 C4 2B 00 	NONE	0
+INFO_DATABASE = Res<1			000007E8 08 21 00 D1 11 00 00 00 00 	NONE	0
+
+//--------------------------- EPS ---------------------------
+
+//System: EPS — NWS initialization
+//NOTE: System=EPS Profile=HMA_0049B DTC=0 Status=0
+INFO_DATABASE = Req>1			000007D4 08 02 10 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007DC 08 02 50 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Req>1			000007D4 08 03 22 F1 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007DC 08 03 62 F1 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Req>1			000007D4 08 02 3E 00 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007DC 08 02 7E 00 00 00 00 00 00 	NONE	0	0
+
+//System: EPS — DTC Read (Profile=HMA_0049B)
+//DTC: 0  Status: 0
+INFO_DATABASE = Req>1			000007D4 08 03 19 02 08 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007DC 08 06 59 02 FF 00 00 08 00 	NONE	0
+
+//---------------------------- FR ----------------------------
+
+//System: FR — NWS initialization
+//NOTE: System=FR Profile=HMA_0048A DTC=0 Status=0
+INFO_DATABASE = Req>1			000007D0 08 02 10 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007D8 08 02 50 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Req>1			000007D0 08 02 3E 00 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007D8 08 02 7E 00 00 00 00 00 00 	NONE	0	0
+
+//System: FR — DTC Read (Profile=HMA_0048A)
+//DTC: 0  Status: 0
+INFO_DATABASE = Req>1			000007D0 08 03 19 02 08 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007D8 08 06 59 02 FF 00 00 08 00 	NONE	0
+
+//--------------------------- FVC ---------------------------
+
+//System: FVC — NWS initialization
+//NOTE: System=FVC Profile=HMA_00486 DTC=0 Status=0
+INFO_DATABASE = Req>1			000007C4 08 02 10 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007CC 08 02 50 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Req>1			000007C4 08 02 3E 00 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007CC 08 02 7E 00 00 00 00 00 00 	NONE	0	0
+
+//System: FVC — DTC Read (Profile=HMA_00486)
+//DTC: 0  Status: 0
+INFO_DATABASE = Req>1			000007C4 08 03 19 02 08 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007CC 08 06 59 02 FF 00 00 08 00 	NONE	0
+
+//--------------------------- HUD ---------------------------
+
+//System: HUD — NWS initialization
+//NOTE: System=HUD Profile=HMA_003C6 DTC=0 Status=0
+INFO_DATABASE = Req>1			00000776 08 02 10 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			0000077E 08 02 50 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Req>1			00000776 08 02 3E 00 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			0000077E 08 02 7E 00 00 00 00 00 00 	NONE	0	0
+
+//System: HUD — DTC Read (Profile=HMA_003C6)
+//DTC: 0  Status: 0
+INFO_DATABASE = Req>1			00000776 08 03 19 02 08 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1			0000077E 08 06 59 02 FF 00 00 08 00 	NONE	0
+
+//--------------------------- IAU ---------------------------
+
+//System: IAU — NWS initialization
+//NOTE: System=IAU Profile=HMA_00481 DTC=0 Status=0
+INFO_DATABASE = Req>1			00000700 08 02 10 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			00000708 08 02 50 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Req>1			00000700 08 02 3E 00 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			00000708 08 02 7E 00 00 00 00 00 00 	NONE	0	0
+
+//System: IAU — DTC Read (Profile=HMA_00481)
+//DTC: 0  Status: 0
+INFO_DATABASE = Req>1			00000700 08 03 19 02 08 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1			00000708 08 06 59 02 FF 00 00 08 00 	NONE	0
+
+//------------------------- IBU-BCM -------------------------
+
+//System: IBU-BCM — NWS initialization
+//NOTE: System=IBU-BCM Profile=HMA_003F9 DTC=0 Status=0
+INFO_DATABASE = Req>1			000007A0 08 02 10 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007A8 08 02 50 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Req>1			000007A0 08 02 3E 00 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007A8 08 02 7E 00 00 00 00 00 00 	NONE	0	0
+
+//System: IBU-BCM — DTC Read (Profile=HMA_003F9)
+//DTC: 0  Status: 0
+INFO_DATABASE = Req>1			000007A0 08 03 19 02 08 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007A8 08 06 59 02 FF 00 00 08 00 	NONE	0
+
+//------------------------- IBU-IMM -------------------------
+
+//System: IBU-IMM — NWS initialization
+//NOTE: System=IBU-IMM Profile=HMA_003CB DTC=0 Status=0
+INFO_DATABASE = Req>1			000007A0 08 02 10 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007A8 08 02 50 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Req>1			000007A0 08 03 22 12 A7 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007A8 08 03 62 12 A7 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Req>1			000007A0 08 02 3E 00 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007A8 08 02 7E 00 00 00 00 00 00 	NONE	0	0
+
+//System: IBU-IMM — DTC Read (Profile=HMA_003CB)
+//DTC: 0  Status: 0
+INFO_DATABASE = Req>1			000007A0 08 03 19 02 08 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007A8 08 06 59 02 FF 00 00 08 00 	NONE	0
+
+//------------------------- IBU-SKU -------------------------
+
+//System: IBU-SKU — NWS initialization
+//NOTE: System=IBU-SKU Profile=HMA_003C3 DTC=0 Status=0
+INFO_DATABASE = Req>1			000007A0 08 02 10 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007A8 08 02 50 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Req>1			000007A0 08 02 3E 00 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007A8 08 02 7E 00 00 00 00 00 00 	NONE	0	0
+
+//System: IBU-SKU — DTC Read (Profile=HMA_003C3)
+//DTC: 0  Status: 0
+INFO_DATABASE = Req>1			000007A0 08 03 19 02 08 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007A8 08 06 59 02 FF 00 00 08 00 	NONE	0
+
+//------------------------- IBU-TPMS -------------------------
+
+//System: IBU-TPMS — NWS initialization
+//NOTE: System=IBU-TPMS Profile=HMA_00487 DTC=0 Status=0
+INFO_DATABASE = Req>1			000007A0 08 02 10 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007A8 08 02 50 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Req>1			000007A0 08 02 3E 00 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007A8 08 02 7E 00 00 00 00 00 00 	NONE	0	0
+
+//System: IBU-TPMS — DTC Read (Profile=HMA_00487)
+//DTC: 0  Status: 0
+INFO_DATABASE = Req>1			000007A0 08 03 19 02 08 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007A8 08 06 59 02 FF 00 00 08 00 	NONE	0
+
+//--------------------------- ICU ---------------------------
+
+//System: ICU — NWS initialization
+//NOTE: System=ICU Profile=HMA_00499 DTC=0 Status=0
+INFO_DATABASE = Req>1			00000770 08 02 10 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			00000778 08 02 50 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Req>1			00000770 08 02 3E 00 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			00000778 08 02 7E 00 00 00 00 00 00 	NONE	0	0
+
+//System: ICU — DTC Read (Profile=HMA_00499)
+//DTC: 0  Status: 0
+INFO_DATABASE = Req>1			00000770 08 03 19 02 08 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1			00000778 08 06 59 02 FF 00 00 08 00 	NONE	0
+
+//--------------------------- MFS ---------------------------
+
+//System: MFS — NWS initialization
+//NOTE: System=MFS Profile=HMA_0047C DTC=0 Status=0
+INFO_DATABASE = Req>1			000007A6 08 02 10 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007AE 08 02 50 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Req>1			000007A6 08 02 3E 00 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007AE 08 02 7E 00 00 00 00 00 00 	NONE	0	0
+
+//System: MFS — DTC Read (Profile=HMA_0047C)
+//DTC: 0  Status: 0
+INFO_DATABASE = Req>1			000007A6 08 03 19 02 08 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007AE 08 06 59 02 FF 00 00 08 00 	NONE	0
+
+//--------------------------- MLM ---------------------------
+
+//System: MLM — NWS initialization
+//NOTE: System=MLM Profile=HMA_0046B DTC=0 Status=0
+INFO_DATABASE = Req>1			00000705 08 02 10 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			0000070D 08 02 50 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Req>1			00000705 08 02 3E 00 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			0000070D 08 02 7E 00 00 00 00 00 00 	NONE	0	0
+
+//System: MLM — DTC Read (Profile=HMA_0046B)
+//DTC: 0  Status: 0
+INFO_DATABASE = Req>1			00000705 08 03 19 02 08 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1			0000070D 08 06 59 02 FF 00 00 08 00 	NONE	0
+
+//--------------------------- OCS ---------------------------
+
+//System: OCS — NWS initialization
+//NOTE: System=OCS Profile=HMA_0026A DTC=0 Status=0
+INFO_DATABASE = Req>1			000007C3 08 02 10 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007CB 08 02 50 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Req>1			000007C3 08 02 3E 00 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007CB 08 02 7E 00 00 00 00 00 00 	NONE	0	0
+
+//System: OCS — DTC Read (Profile=HMA_0026A)
+//DTC: 0  Status: 0
+INFO_DATABASE = Req>1			000007C3 08 03 19 02 08 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007CB 08 06 59 02 FF 00 00 08 00 	NONE	0
+
+//--------------------------- PSM ---------------------------
+
+//System: PSM — NWS initialization
+//NOTE: System=PSM Profile=HMA_0048B DTC=0 Status=0
+INFO_DATABASE = Req>1			000007A3 08 02 10 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007AB 08 02 50 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Req>1			000007A3 08 02 3E 00 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007AB 08 02 7E 00 00 00 00 00 00 	NONE	0	0
+
+//System: PSM — DTC Read (Profile=HMA_0048B)
+//DTC: 0  Status: 0
+INFO_DATABASE = Req>1			000007A3 08 03 19 02 08 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007AB 08 06 59 02 FF 00 00 08 00 	NONE	0
+
+//-------------------------- RCR_L --------------------------
+
+//System: RCR_L — NWS initialization
+//NOTE: System=RCR_L Profile=HMA_00498 DTC=0 Status=0
+INFO_DATABASE = Req>1			000007B7 08 02 10 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007BF 08 02 50 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Req>1			000007B7 08 02 3E 00 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007BF 08 02 7E 00 00 00 00 00 00 	NONE	0	0
+
+//System: RCR_L — DTC Read (Profile=HMA_00498)
+//DTC: 0  Status: 0
+INFO_DATABASE = Req>1			000007B7 08 03 19 02 08 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007BF 08 06 59 02 FF 00 00 08 00 	NONE	0
+
+//-------------------------- RCR_R --------------------------
+
+//System: RCR_R — NWS initialization
+//NOTE: System=RCR_R Profile=HMA_0049E DTC=0 Status=0
+INFO_DATABASE = Req>1			00000755 08 02 10 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			0000075D 08 02 50 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Req>1			00000755 08 02 3E 00 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			0000075D 08 02 7E 00 00 00 00 00 00 	NONE	0	0
+
+//System: RCR_R — DTC Read (Profile=HMA_0049E)
+//DTC: 0  Status: 0
+INFO_DATABASE = Req>1			00000755 08 03 19 02 08 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1			0000075D 08 06 59 02 FF 00 00 08 00 	NONE	0
+
+//--------------------------- RVMS ---------------------------
+
+//System: RVMS — NWS initialization
+//NOTE: System=RVMS Profile=HMA_003B5 DTC=0 Status=0
+INFO_DATABASE = Req>1			00000796 08 02 10 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			0000079E 08 02 50 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Req>1			00000796 08 02 3E 00 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			0000079E 08 02 7E 00 00 00 00 00 00 	NONE	0	0
+
+//System: RVMS — DTC Read (Profile=HMA_003B5)
+//DTC: 0  Status: 0
+INFO_DATABASE = Req>1			00000796 08 03 19 02 08 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1			0000079E 08 06 59 02 FF 00 00 08 00 	NONE	0
+
+//--------------------------- SCU ---------------------------
+
+//System: SCU — NWS initialization
+//NOTE: System=SCU Profile=HMA_00401 DTC=0 Status=0
+INFO_DATABASE = Req>1			000007E6 08 02 10 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007EE 08 02 50 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Req>1			000007E6 08 02 3E 00 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007EE 08 02 7E 00 00 00 00 00 00 	NONE	0	0
+
+//System: SCU — DTC Read (Profile=HMA_00401)
+//DTC: 0  Status: 0
+INFO_DATABASE = Req>1			000007E6 08 03 19 02 0D 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007EE 08 06 59 02 FF 00 00 00 00 	NONE	0
+
+//-------------------------- SHVU-F --------------------------
+
+//System: SHVU-F — NWS initialization
+//NOTE: System=SHVU-F Profile=HMA_0047D DTC=0 Status=0
+INFO_DATABASE = Req>1			00000706 08 02 10 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			0000070E 08 02 50 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Req>1			00000706 08 02 3E 00 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			0000070E 08 02 7E 00 00 00 00 00 00 	NONE	0	0
+
+//System: SHVU-F — DTC Read (Profile=HMA_0047D)
+//DTC: 0  Status: 0
+INFO_DATABASE = Req>1			00000706 08 03 19 02 08 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1			0000070E 08 06 59 02 FF 00 00 08 00 	NONE	0
+
+//-------------------------- SHVU-R --------------------------
+
+//System: SHVU-R — NWS initialization
+//NOTE: System=SHVU-R Profile=HMA_0047E DTC=0 Status=0
+INFO_DATABASE = Req>1			00000707 08 02 10 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			0000070F 08 02 50 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Req>1			00000707 08 02 3E 00 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			0000070F 08 02 7E 00 00 00 00 00 00 	NONE	0	0
+
+//System: SHVU-R — DTC Read (Profile=HMA_0047E)
+//DTC: 0  Status: 0
+INFO_DATABASE = Req>1			00000707 08 03 19 02 08 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1			0000070F 08 06 59 02 FF 00 00 08 00 	NONE	0
+
 //--------------------------- SRS ---------------------------
 
 //System: SRS — NWS initialization
-//NOTE: System=SRS Profile=HMA_003CC DTC=B135600 Status=0
-INFO_DATABASE = Req>1			000007D2 08 02 10 03 00 00 00 00 00 	NONE	0	0
-INFO_DATABASE = Res<1			000007DA 08 02 50 03 00 00 00 00 00 	NONE	0	0
-INFO_DATABASE = Req>1			000007D2 08 02 3E 00 00 00 00 00 00 	NONE	0	0
-INFO_DATABASE = Res<1			000007DA 08 02 7E 00 00 00 00 00 00 	NONE	0	0
-//NOTE: System=SRS Profile=HMA_003CC DTC=B135700 Status=0
-//NOTE: System=SRS Profile=HMA_003CC DTC=B135800 Status=0
-//NOTE: System=SRS Profile=HMA_003CC DTC=B135900 Status=0
 //NOTE: System=SRS Profile=HMA_003BD DTC=B135600 Status=0
 INFO_DATABASE = Req>1			000007D2 08 02 10 03 00 00 00 00 00 	NONE	0	0
 INFO_DATABASE = Res<1			000007DA 08 02 50 03 00 00 00 00 00 	NONE	0	0
@@ -308,6 +1617,25 @@ INFO_DATABASE = Res<1			000007DA 08 02 7E 00 00 00 00 00 00 	NONE	0	0
 //NOTE: System=SRS Profile=HMA_003BD DTC=B135700 Status=0
 //NOTE: System=SRS Profile=HMA_003BD DTC=B135800 Status=0
 //NOTE: System=SRS Profile=HMA_003BD DTC=B135900 Status=0
+//NOTE: System=SRS Profile=HMA_003CC DTC=B135600 Status=0
+INFO_DATABASE = Req>1			000007D2 08 02 10 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007DA 08 02 50 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Req>1			000007D2 08 02 3E 00 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007DA 08 02 7E 00 00 00 00 00 00 	NONE	0	0
+//NOTE: System=SRS Profile=HMA_003CC DTC=B135700 Status=0
+//NOTE: System=SRS Profile=HMA_003CC DTC=B135800 Status=0
+//NOTE: System=SRS Profile=HMA_003CC DTC=B135900 Status=0
+
+//System: SRS — DTC Read (Profile=HMA_003BD)
+//DTC: B135600  Status: 0
+//DTC: B135700  Status: 0
+//DTC: B135800  Status: 0
+//DTC: B135900  Status: 0
+INFO_DATABASE = Req>1			000007D2 08 03 19 02 08 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007DA 08 10 13 59 02 FF 93 56 00 	NONE	0
+INFO_DATABASE = Req>1			Q-- 000007D2 08 30 xx xx 00 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1			000007DA 08 21 08 93 57 00 08 93 58 	NONE	0
+INFO_DATABASE = Res<1			000007DA 08 22 00 08 93 59 00 08 00 	NONE	0
 
 //System: SRS — DTC Read (Profile=HMA_003CC)
 //DTC: B135600  Status: 0
@@ -320,13 +1648,25 @@ INFO_DATABASE = Req>1			Q-- 000007D2 08 30 xx xx 00 00 00 00 00 	NONE	0
 INFO_DATABASE = Res<1			000007DA 08 21 08 93 57 00 08 93 58 	NONE	0
 INFO_DATABASE = Res<1			000007DA 08 22 00 08 93 59 00 08 00 	NONE	0
 
-//System: SRS — DTC Read (Profile=HMA_003BD)
-//DTC: B135600  Status: 0
-//DTC: B135700  Status: 0
-//DTC: B135800  Status: 0
-//DTC: B135900  Status: 0
-INFO_DATABASE = Req>1			000007D2 08 03 19 02 08 00 00 00 00 	NONE	0
-INFO_DATABASE = Res<1			000007DA 08 10 13 59 02 FF 93 56 00 	NONE	0
-INFO_DATABASE = Req>1			Q-- 000007D2 08 30 xx xx 00 00 00 00 00 	NONE	0
-INFO_DATABASE = Res<1			000007DA 08 21 08 93 57 00 08 93 58 	NONE	0
-INFO_DATABASE = Res<1			000007DA 08 22 00 08 93 59 00 08 00 	NONE	0
+//--------------------------- T-CS ---------------------------
+
+//System: T-CS — NWS initialization
+//NOTE: System=T-CS Profile=HMA_00275 DTC=0 Status=0
+INFO_DATABASE = Req>1			000007A0 08 02 10 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007A8 08 02 50 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Req>1			000007A0 08 02 3E 00 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007A8 08 02 7E 00 00 00 00 00 00 	NONE	0	0
+
+//--------------------------- WPC ---------------------------
+
+//System: WPC — NWS initialization
+//NOTE: System=WPC Profile=HMA_0032F DTC=0 Status=0
+INFO_DATABASE = Req>1			00000725 08 02 10 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			0000072D 08 02 50 03 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Req>1			00000725 08 02 3E 00 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			0000072D 08 02 7E 00 00 00 00 00 00 	NONE	0	0
+
+//System: WPC — DTC Read (Profile=HMA_0032F)
+//DTC: 0  Status: 0
+INFO_DATABASE = Req>1			00000725 08 03 19 02 08 00 00 00 00 	NONE	0
+INFO_DATABASE = Res<1			0000072D 08 06 59 02 FF 00 00 08 00 	NONE	0
