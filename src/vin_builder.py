@@ -363,6 +363,61 @@ def _field(row: dict, *keys: str, default: str = 'N/A') -> str:
     return default
 
 
+# ── Protocol detection ────────────────────────────────────────────────────────
+
+_KW_PROTOCOLS = {'PROTOCOL_KW', 'PROTOCOL_ISO9141'}
+
+def _detect_protocol(config_path: Path) -> str:
+    """
+    Return 'KW', 'ISO9141', or 'CAN' based on the Protocol column in the NWS
+    sheet of *config_path*.
+
+    Requires the Protocol column written by auto_create_config.py.
+    Falls back to 'CAN' when the column is absent or no serial protocol is found.
+    """
+    try:
+        xf = pd.ExcelFile(str(config_path))
+        if 'NWS' not in xf.sheet_names:
+            return 'CAN'
+        nws = pd.read_excel(xf, sheet_name='NWS').astype(str)
+        if 'Protocol' not in nws.columns:
+            return 'CAN'
+        protocols = set(nws['Protocol'].unique())
+        if 'PROTOCOL_ISO9141' in protocols:
+            return 'ISO9141'
+        if 'PROTOCOL_KW' in protocols:
+            return 'KW'
+        return 'CAN'
+    except Exception:
+        return 'CAN'
+
+
+def _first_serial_profile(
+    config_path: Path,
+    profile_df: pd.DataFrame,
+) -> 'pd.Series | None':
+    """
+    Return the first NWS Profile DB row matching a KW/ISO9141 entry in the
+    NWS sheet of *config_path*.  Used to extract pin/baudrate for the header.
+    """
+    try:
+        xf = pd.ExcelFile(str(config_path))
+        if 'NWS' not in xf.sheet_names:
+            return None
+        nws = pd.read_excel(xf, sheet_name='NWS').astype(str)
+        kw_rows = nws[nws.get('Protocol', pd.Series(dtype=str)).isin(_KW_PROTOCOLS)]
+        for _, row in kw_rows.iterrows():
+            prof = str(row.get('Profile', '')).strip()
+            if not prof or prof in ('', 'nan', 'NaN'):
+                continue
+            matches = profile_df[profile_df['MsgID/ECUID'] == prof]
+            if not matches.empty:
+                return matches.iloc[0]
+    except Exception:
+        pass
+    return None
+
+
 # ── Main generator ────────────────────────────────────────────────────────────
 
 def generate_vin_sim_files(
@@ -387,23 +442,57 @@ def generate_vin_sim_files(
         batch-processing many configs so the master databases are loaded only once.
         A fresh DataLoader is created internally when None is passed.
     """
-    from first_idea import DataLoader, build_all_system_content
+    from first_idea import DataLoader
+    from src.can_builder import build_can_header, build_can_system_content
+    from src.kw_builder  import build_kw_header,  build_kw_obd2_section,  build_kw_system_content
+    from src.iso_builder import build_iso_header, build_iso_obd2_section, build_iso_system_content
 
     if loader is None:
         loader = DataLoader()
 
-    # PIDs sheet is optional — auto-generated configs contain only VIN_YMME + NWS
-    xf = pd.ExcelFile(str(config_path))
-    if 'PIDs' in xf.sheet_names:
-        pids = pd.read_excel(xf, sheet_name='PIDs').astype(str)
-    else:
-        pids = pd.DataFrame(columns=['ItemID', 'System', 'Value', 'MsgID/ECUID/ProfileID'])
+    # ── Detect protocol from NWS sheet Protocol column ───────────────────
+    protocol = _detect_protocol(config_path)   # 'KW' | 'ISO9141' | 'CAN'
 
+    # ── Load NWS profile DB once ──────────────────────────────────────────
+    nws_profile_df = loader.get('NWS', 'Profile')
+
+    # ── Build per-system content ──────────────────────────────────────────
     system_content: dict[str, list[str]] = {}
     try:
-        system_content = build_all_system_content(pids, loader, config_path)
+        if protocol == 'KW':
+            system_content = build_kw_system_content(config_path, nws_profile_df)
+        elif protocol == 'ISO9141':
+            system_content = build_iso_system_content(config_path, nws_profile_df)
+        else:
+            xf = pd.ExcelFile(str(config_path))
+            pids = (pd.read_excel(xf, sheet_name='PIDs').astype(str)
+                    if 'PIDs' in xf.sheet_names
+                    else pd.DataFrame(columns=['ItemID', 'System', 'Value',
+                                               'MsgID/ECUID/ProfileID']))
+            system_content = build_can_system_content(pids, loader, config_path)
     except Exception as exc:
-        logger.warning('Could not load system content: %s — only OBD2 section written', exc)
+        logger.warning('System content build failed (%s): %s — OBD2 only', protocol, exc)
+
+    # ── Resolve header + OBD2 params from first profile in NWS sheet ─────
+    header_lines: list[str]  = list(_HEADER_LINES)
+    obd2_ecu:     str        = '11'   # KW: ECU addr in OBD2 responses
+    iso_tgt:      str        = '6A'   # ISO9141: request target (TagAddr)
+    five_baud:    str        = '33'   # ISO9141: 5-baud init address
+
+    if protocol in ('KW', 'ISO9141'):
+        prow = _first_serial_profile(config_path, nws_profile_df)
+        if prow is not None:
+            if protocol == 'KW':
+                header_lines = build_kw_header(prow)
+                tgt = str(prow.get('TagAddr/CanReq1', '')).strip()
+                if tgt and tgt not in ('nan', 'NaN', ''):
+                    obd2_ecu = tgt
+            else:
+                header_lines = build_iso_header(prow)
+                tgt = str(prow.get('TagAddr/CanReq1', '')).strip()
+                iso_tgt = tgt if tgt not in ('nan', 'NaN', '') else '6A'
+                fb = str(prow.get('FiveBaud', '')).strip()
+                five_baud = fb if fb not in ('nan', 'NaN', '') else '33'
 
     df = pl.read_excel(str(config_path), sheet_name='VIN_YMME')
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -427,8 +516,15 @@ def generate_vin_sim_files(
         vehicle_dir.mkdir(parents=True, exist_ok=True)
 
         # ── .sim ──────────────────────────────────────────────────────────
-        lines: list[str] = [f'//Note: {folder_tag}', *_HEADER_LINES]
-        lines.extend(_build_obd2_section(vin))
+        lines: list[str] = [f'//Note: {folder_tag}', *header_lines]
+        if protocol == 'KW':
+            lines.extend(build_kw_obd2_section(vin, obd2_ecu=obd2_ecu))
+        elif protocol == 'ISO9141':
+            lines.extend(build_iso_obd2_section(
+                vin, tgt=iso_tgt, five_baud_addr=five_baud))
+        else:
+            lines.extend(_build_obd2_section(vin))
+
         for system, sys_lines in system_content.items():
             lines.append('')
             lines.append(_system_banner(system))
